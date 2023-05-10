@@ -42,7 +42,7 @@ html {
     position: absolute;
     top:9.4%;
     left:44.7%; 
-    width:0.3%;
+    width:0.4%;
     height: 9%;
     display: block;
     transform: rotate(180deg);
@@ -52,7 +52,7 @@ html {
       position: absolute;
       top:22.2%;
       left:38%; 
-      width:0.32%;
+      width:0.4%;
       height: 17%;
       display: block;
       transform: rotate(225deg);
@@ -63,7 +63,7 @@ html {
         position: absolute;
         top:43.8%;
         left:37.7%; 
-        width:0.32%;
+        width:0.4%;
         height: 33%;
         display: block;
         transform: rotate(-205deg);
@@ -74,7 +74,7 @@ html {
     position: absolute;
       top:57.3%;
       left:28%; 
-      width:0.3%;
+      width:0.4%;
       height: 42%;
       display: block;
       transform: rotate(270deg);
@@ -84,7 +84,7 @@ html {
     position: absolute;
     top:3.5%;
     left:14.4%; 
-    width:0.3%;
+    width:0.4%;
     height: 75%;
     display: block;
     transform: rotate(360deg);
@@ -95,7 +95,7 @@ html {
       position: absolute;
     top:-17.5%;
     left:28%; 
-    width:0.3%;
+    width:0.4%;
     height: 42.4%;
     display: block;
     transform: rotate(90deg);
@@ -110,7 +110,7 @@ html {
     position: absolute;
     top:-17.5%;
     left:61.5%; 
-    width:0.3%;
+    width:0.4%;
     height: 42.4%;
     display: block;
     transform: rotate(90deg);
@@ -120,7 +120,7 @@ html {
     position: absolute;
     top:3.5%;
     left:75.5%; 
-    width:0.3%;
+    width:0.4%;
     height: 92.4%;
     display: block;
     transform: rotate(180deg);
@@ -131,7 +131,7 @@ html {
       position: absolute;
       top:74.5%;
       left:61.5%; 
-      width:0.3%;
+      width:0.4%;
       height: 42.3%;
       display: block;
       transform: rotate(270deg);
@@ -141,7 +141,7 @@ html {
         position: absolute;
         top:21.5%;
         left:52%; 
-        width:0.32%;
+        width:0.4%;
         height: 17.8%;
         display: block;
         transform: rotate(135deg);
@@ -151,7 +151,7 @@ html {
           position: absolute;
           top:45.5%;
           left:56.5%; 
-          width:0.3%;
+          width:0.4%;
           height: 9%;
           display: block;
           transform: rotate(180deg);
@@ -163,7 +163,7 @@ html {
             position: absolute;
             top:59%;
             left:50%; 
-            width:0.32%;
+            width:0.4%;
             height: 17%;
             display: block;
             transform: rotate(225deg);
