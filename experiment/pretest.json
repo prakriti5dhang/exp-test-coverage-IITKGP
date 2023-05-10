@@ -1,0 +1,18 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What does CFG of a program describe?",
+      "answers": {
+        "a": "Sequence of function calls",
+        "b": "Sequence of statements executed ",
+        "c": "Contents of the stack ",
+        "d": "There's nothing called CFG! "       
+       
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
