@@ -59,6 +59,7 @@ Author: Prakriti Dhang
   <option value="0" selected>Exercise #</option>
   <option value="1">Exercise 1</option>
   <option value="2">Exercise 2</option>
+  <option value="3">Exercise 3</option>
   
 </select>
 <br>
@@ -76,10 +77,49 @@ Author: Prakriti Dhang
 
 				<div class="card border border-2 border-info p-2" id="exercise1" style="display:none;">
   <div class="card-body">
-	<label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold;">Draw a data flow diagram to graphically represent the following system</label>
-   <p class="fs-6" style="text-align: justify;">Draw a context-level DFD to depict the typical user authentication process used by any system. An user gives two inputs -- user name and password.</p>
-  
-
+	<label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold;">Identification of basic blocks from a program and determining it's cyclomatic complexity</label>
+   <p class="fs-6" style="text-align: justify;">Consider the following simple C program.</p>
+  <p class="fs-6 border border-1 border-dark p-2">
+    #include &lt;stdio.h&gt; 
+      <br><br>
+    int<br>
+    main(int argc, char **argv)<br>
+    {<br>
+    &nbsp;&nbsp;    int i;<br>
+    &nbsp;&nbsp;    int sum;<br>
+    &nbsp;&nbsp;    int n = 10;<br>
+        <br>
+        &nbsp;&nbsp;sum = 0;<br>
+        &nbsp;&nbsp;for (i = 1; i &lt;= n; i++)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += i;<br>
+      
+             <br>  
+             &nbsp;&nbsp;printf("Sum of first %d natural numbers is: %d\n", n, sum);<br>
+             &nbsp;&nbsp;return 0;<br>
+        <br>
+  }<br>
+      
+  </p>
+  <p class="fs-6" style="text-align: justify;">
+    Any sequence of instructions in a program could be represented in terms of basic blocks, and a CFG could be 
+    drawn using those basic blocks. For the given C program:
+  </p>
+  <ul class="fs-6">
+    <li>Identify the basic blocks and verify whether your representation matches with the output produced after 
+      compiling your program</li>
+    <li>Draw a Control Flow Graph (CFG) using these basic blocks. Again, verify how the CFG generated after 
+      compilation relates to the basic blocks identified by the compiler</li>
+    <li>Calculate McCabe's complexity from the CFG so obtained</li>
+    </ul>
+  <p class="fs-6 fw-bold">Learning Objectives:</p>
+  <ul class="fs-6"> 
+    <li>Identify the basic basic blocks for a given program</li>
+    <li>Draw a CFG using the basic blocks</li>
+    <li>Determination of McCabe's complexity from a CFG</li>
+  </ul>
+  <p class="fs-6" style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function. 
+    In other words, this would not work with user-defined functions. However, in real life a program would contain 
+    several modules. All such modules have to be taken into account while determining the complexity.</p>
 </div> <!-- card body ended for exercise 1 problem statment-->
 </div> <!-- card ended for exercise 1 problem statement-->
 
@@ -96,186 +136,40 @@ Author: Prakriti Dhang
     <div class="col-md-11" >
 
       <!--------------------------------------------------------------- Table 1---------------------------------------------------------------->
-      <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Table #1:  Add external entity</label>
+      <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
       <form id="ftbl1"  class="p-1 bg-white " action="">
-      <div class="table-responsive">
-    <table id="tbl1" class="table table-bordered  border border-1 border-info table-stripped">
-      <thead>
-        <th>External Entity (EE)</th>
-        <th>Add</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input class="form-control border-primary " type="text" id="inp1" ></td>
-          <td style="text-align: center;"><button id="t1addbtn" class="btn btn-primary" type="button" onclick="addbtnt1()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
-        </tr>
-      </tbody>
- 
-    </table>
-   </div> <!-- table 1 responsive div ended for exercise 1-->
+        <div class="card card-body border-1 border-dark">
+          <div class="form-group purple-border">
+          <textarea id="inp1" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
+        </div></div>
+        <button id="t1addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt1()" >Compile Program</button>
 </form>
 <!------------------------------------------------------------Table 2-------------------------------------------------------------------------->
-  <label for="table2" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add process</label>
+  <label for="table2" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
   <form id="ftbl2"  class="p-1 bg-white " action="">
-    <div class="table-responsive">
-  <table id="tbl2" class="table column-bordered-table table-bordered border border-1 border-info ">
-    <thead>
-      <th>Process (P)</th>
-      <th>Level</th>
-     
-      <th>Add</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <input class="form-control border-primary " type="text" id="inp2" >
-        </td>
-      
-        <td><input class="form-control border-primary " type="text" id="inp3" ></td>
-        <td ><button id="t2addbtn" class="btn btn-primary" type="button" onclick="addbtnt2()" ><i class="bi bi-plus-lg"></i>Add</button></td>
-      </tr>
-    </tbody>
-
-  </table>
- </div> <!-- table 2 responsive div ended for exercise 1-->
+    <div class="card card-body border-1 border-dark">
+      <textarea id="inp2" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="5" readonly></textarea>
+    </div>
 </form>
   
 <!-------------------------------------------------------------- Table 3---------------------------------------------------------------------->
 
-<label for="table3" class="form-label fs-6" style=" font-weight: bold;">Table #3: Add data store</label>
+<label for="table3" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
   <form id="ftbl3"  class="p-1 bg-white " action="">
-    <div class="table-responsive">
-  <table id="tbl3" class="table table-bordered  border border-1 border-info table-stripped">
-    <thead>
-      <th>Data Store (DS)</th>
-     
-      <th>Add</th>
-      
-
-    </thead>
-    <tbody>
-      <tr>
-        
-        
-        <td>
-          <input class="form-control border-primary " type="text" id="inp4" >
-        </td>
-        
-        <td>
-          <button id="t3addbtn" class="btn btn-primary" type="button" onclick="addbtnt3()" ><i class="bi bi-plus-lg"></i>Add</button>
-        </td>
-       
-      </tr>
-    </tbody>
-
-  </table>
- </div> <!-- table 3 responsive div ended for exercise 1-->
+    <div class="card card-body border-1 border-dark">
+      <textarea id="inp3" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly></textarea>
+    </div>
 </form>
 
 <!----------------------------------------------------------------------- Table 4 ------------------------------------------------------------->
 
-<label for="table4" class="form-label fs-6" style=" font-weight: bold;">Table #4: Add data flows</label>
-  <form id="ftbl4"  class="p-1 bg-white " action="">
-    <div class="table-responsive">
-  <table id="tbl4" class="table table-bordered  border border-1 border-info table-stripped">
-    <thead>
-      <th>Type (P/DS/EE)</th>
-      <th>From</th>
-      <th>Data Label</th>
-      <th>Type (P/DS/EE)</th>
-      <th>To</th>
-      <th>Add</th>
-      
-
-    </thead>
-    <tbody>
-      <tr>
-        <td> <select id="selecttype1" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-          <option value="0" selected>Select</option>
-          <option value="1">External entity</option>
-          <option value="2">Process</option>
-          <option value="2">Data store</option>
-         
-        </select></td>
-        <td>
-          <select id="selectfrom" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-          <option value="0" selected>Select</option>
-        
-         
-        </select>
-        </td>
-
-        <td>  <input class="form-control border-primary " type="text" id="inp4" ></td>
-
-        <td>
-          <select id="selecttype2" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-            <option value="0" selected>Select</option>
-            <option value="1">External entity</option>
-            <option value="2">Process</option>
-            <option value="2">Data store</option>
-           
-          </select>
-        </td>
-        <td>
-          <select id="selectto" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-            <option value="0" selected>Select</option>
-          
-           
-          </select>
-        </td>
-        <td>
-          <button id="t4addbtn" class="btn btn-primary" type="button" onclick="addbtnt4()" ><i class="bi bi-plus-lg"></i>Add</button>
-        </td>
-      </tr>
-      
-    </tbody>
-
-  </table>
- </div> <!-- table 4 responsive div ended for exercise 1-->
-</form>
-
-
-<!---------------------------------------------------------------------- Table 5--------------------------------------------------------------->
-<label for="table5" class="form-label fs-6" style=" font-weight: bold;">Table #5:  List of external entities, data stores, and processes</label>
-<form id="ftbl5"  class="p-1 bg-white " action="">
-<div class="table-responsive">
-<table id="tbl5" class="table table-bordered  border border-1 border-info table-stripped">
-<thead>
-  <th>External Entity</th>
-  <th>Data Store</th>
-  <th>Process</th>
-
-</thead>
-<tbody id="tbodyt5">
+<label for="table4" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
+</label>
   
-</tbody>
 
-</table>
-</div> <!-- table 5 responsive div ended for exercise 1-->
-</form>
-<!--------------------------------------------------------------------Table 6------------------------------------------------------------------>
-<label for="table6" class="form-label fs-6" style=" font-weight: bold;">Table #6: List of data flows
- </label>
-<form id="ftbl6"  class="p-1 bg-white" action="">
-<div class="table-responsive">
-<table id="tbl6" class="table table-bordered  border border-1 border-info table-stripped">
-<thead>
-  <th>From</th>
-  <th>Data Label</th>
-  <th>To</th>
-  
-  <th>Remove</th>
-  
-</thead>
-<tbody id="tbodytbt6">
- 
-</tbody>
+<br>
+<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()" > <i class="bi bi-pencil-fill"></i> Show</button></td>
 
-</table>
-</div> <!-- table 6 responsive div ended for exercise 1-->
-
-<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()" ><i class="bi bi-pencil-fill"></i>Draw</button></td>
-</form>
 </div> <!-- column ended for exercise 1-->
 </div> <!--row ended for exrcise 1-->
 </div> <!--card body ended for exrcise 1-->
@@ -283,7 +177,7 @@ Author: Prakriti Dhang
 
 <div id="dispuml1" class="card border border-2 border-primary" style="display:none;">
   <div class="card-body">
-<div id="dfd_diag_ex1">
+<div id="cfg_diag_ex1">
 
 </div>
 </div>
@@ -297,27 +191,48 @@ Author: Prakriti Dhang
 
 <div class="card border border-2 border-info p-2" id="exercise2" style="display:none;">
   <div class="card-body">
-	<label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold;">DFD for a Social Networking site</label>
-   <p class="fs-6" style="text-align: justify;">The Absolute Beginners Inc. is planning to launch a revolutionary social networking site,
-     EyeCopy. You have been entrusted with designing a DFD for the proposed application. In particular, you have been asked to show the 
-     following scenarios:</p>
+	<label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold;">Finding linearly independent paths from a given program</label>
+   <p class="fs-6" style="text-align: justify;">Consider the following simple C program.</p>
 
-   
+   <p class="fs-6 border border-1 border-dark p-2">
+    #include &lt;stdio.h&gt;<br>
+    <br>
+    int<br>
+    main(int argc, char **argv)<br>
+    {<br>
+    &nbsp;&nbsp;     int a[5][10];<br>
+    &nbsp;&nbsp;     int i;<br>
+    &nbsp;&nbsp;     int j;<br>
+    &nbsp;&nbsp;     int nr;<br>
+    &nbsp;&nbsp;     int nc;<br>
+         <br>
+    &nbsp;&nbsp;     nr = 5;<br>
+    &nbsp;&nbsp;     nr = 5;<br>
+    &nbsp;&nbsp;     nc = 10;<br>
+         <br>
+    &nbsp;&nbsp;     for (i = 0; i &lt;= nr; i++) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;         for (j = 0; j &lt;= nc; j++) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             a[i][j] = 0;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
+        &nbsp;&nbsp;      }<br>
+          <br>
+          &nbsp;&nbsp;      return 0;<br>
+     }
+      
+   </p>
+   <p class="fs-6 fw-bold">Tasks:</p>
 <ul>
-   <li>User registration
-    </li> 
-   <li>User login
-    </li>
-   <li> Profile update</li>
-    
-   </ul>
+  <li>Compile the above program to generate it's CFG. Verify whetther the CFG corresponds to the basic blocks</li>
+  <li>Identify the linearly independent paths from the CFG. The paths would be indicated by the basic block numbers (instead of line numbers of the actual program)
+   </li>
+</ul>
+   <p class="fs-6 fw-bold">Learning Objectives:</p>
+   
+   <ul>
+    <li> Identify the linearly independent paths from a CFG</li></ul>
+    <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function. In other words, this would not work with user-defined functions. However, in real life a program would contain several modules. All such modules have to be taken into account while determining the complexity.
 
-   <p class="fs-6" style="text-align: justify;">Draw a Level 1 DFD to depict the above data flow and the corresponding processes. Should there be any data store in the DFD?
-
-  </p>
- 
-
-
+</p>
 </div> <!-- card body ended for exercise 1 problem statment-->
 </div> <!-- card ended for exercise 1 problem statement-->
 
@@ -333,186 +248,39 @@ Author: Prakriti Dhang
     <div class="row">
     <div class="col-md-12" >
 
-         <!--------------------------------------------------------------- Table 1---------------------------------------------------------------->
-         <label for="table21" class="form-label fs-6" style=" font-weight: bold;">Table #1:  Add external entity</label>
-         <form id="ftbl21"  class="p-1 bg-white " action="">
-         <div class="table-responsive">
-       <table id="tbl21" class="table table-bordered  border border-1 border-info table-stripped">
-         <thead>
-           <th>External Entity (EE)</th>
-           <th>Add</th>
-         </thead>
-         <tbody>
-           <tr>
-             <td><input class="form-control border-primary " type="text" id="inp21" ></td>
-             <td style="text-align: center;"><button id="t21addbtn" class="btn btn-primary" type="button" onclick="addbtnt21()"  ><i class="bi bi-plus-lg"></i>Add</button></td>
-           </tr>
-         </tbody>
-    
-       </table>
-      </div> <!-- table 1 responsive div ended for exercise 2-->
-   </form>
-   <!------------------------------------------------------------Table 2-------------------------------------------------------------------------->
-     <label for="table22" class="form-label fs-6" style=" font-weight: bold;">Table #2: Add process</label>
-     <form id="ftbl22"  class="p-1 bg-white " action="">
-       <div class="table-responsive">
-     <table id="tbl22" class="table column-bordered-table table-bordered border border-1 border-info ">
-       <thead>
-         <th>Process (P)</th>
-         <th>Level</th>
-        
-         <th>Add</th>
-       </thead>
-       <tbody>
-         <tr>
-           <td>
-             <input class="form-control border-primary " type="text" id="inp22" >
-           </td>
-         
-           <td><input class="form-control border-primary " type="text" id="inp23" ></td>
-           <td ><button id="t22addbtn" class="btn btn-primary" type="button" onclick="addbtnt22()" ><i class="bi bi-plus-lg"></i>Add</button></td>
-         </tr>
-       </tbody>
-   
-     </table>
-    </div> <!-- table 2 responsive div ended for exercise 2-->
-   </form>
-     
-   <!-------------------------------------------------------------- Table 3---------------------------------------------------------------------->
-   
-   <label for="table23" class="form-label fs-6" style=" font-weight: bold;">Table #3: Add data store</label>
-     <form id="ftbl23"  class="p-1 bg-white " action="">
-       <div class="table-responsive">
-     <table id="tbl23" class="table table-bordered  border border-1 border-info table-stripped">
-       <thead>
-         <th>Data Store (DS)</th>
-        
-         <th>Add</th>
-         
-   
-       </thead>
-       <tbody>
-         <tr>
-           
-           
-           <td>
-             <input class="form-control border-primary " type="text" id="inp24" >
-           </td>
-           
-           <td>
-             <button id="t23addbtn" class="btn btn-primary" type="button" onclick="addbtnt23()" ><i class="bi bi-plus-lg"></i>Add</button>
-           </td>
-          
-         </tr>
-       </tbody>
-   
-     </table>
-    </div> <!-- table 3 responsive div ended for exercise 2-->
-   </form>
-   
-   <!----------------------------------------------------------------------- Table 4 ------------------------------------------------------------->
-   
-   <label for="table24" class="form-label fs-6" style=" font-weight: bold;">Table #4: Add data flows</label>
-     <form id="ftbl24"  class="p-1 bg-white " action="">
-       <div class="table-responsive">
-     <table id="tbl24" class="table table-bordered  border border-1 border-info table-stripped">
-       <thead>
-         <th>Type (P/DS/EE)</th>
-         <th>From</th>
-         <th>Data Label</th>
-         <th>Type (P/DS/EE)</th>
-         <th>To</th>
-         <th>Add</th>
-         
-   
-       </thead>
-       <tbody>
-         <tr>
-           <td> <select id="selecttype21" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-             <option value="0" selected>Select</option>
-             <option value="1">External entity</option>
-             <option value="2">Process</option>
-             <option value="2">Data store</option>
-            
-           </select></td>
-           <td>
-             <select id="selectfrom2" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-             <option value="0" selected>Select</option>
-           
-            
-           </select>
-           </td>
-   
-           <td>  <input class="form-control border-primary " type="text" id="inp24" ></td>
-   
-           <td>
-             <select id="selecttype22" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-               <option value="0" selected>Select</option>
-               <option value="1">External entity</option>
-               <option value="2">Process</option>
-               <option value="2">Data store</option>
-              
-             </select>
-           </td>
-           <td>
-             <select id="selectto2" class="form-select float-center border border-1 border-primary" aria-label="Default select example" >
-               <option value="0" selected>Select</option>
-             
-              
-             </select>
-           </td>
-           <td>
-             <button id="t24addbtn" class="btn btn-primary" type="button" onclick="addbtnt24()" ><i class="bi bi-plus-lg"></i>Add</button>
-           </td>
-         </tr>
-         
-       </tbody>
-   
-     </table>
-    </div> <!-- table 4 responsive div ended for exercise 2-->
-   </form>
-   
-   
-   <!---------------------------------------------------------------------- Table 5--------------------------------------------------------------->
-   <label for="table25" class="form-label fs-6" style=" font-weight: bold;">Table #5: List of external entities, data stores, and processes</label>
-   <form id="ftbl25"  class="p-1 bg-white " action="">
-   <div class="table-responsive">
-   <table id="tbl25" class="table table-bordered  border border-1 border-info table-stripped">
-   <thead>
-     <th>External Entity</th>
-     <th>Data Store</th>
-     <th>Process</th>
-   
-   </thead>
-   <tbody id="tbodyt25">
-     
-   </tbody>
-   
-   </table>
-   </div> <!-- table 5 responsive div ended for exercise 2-->
-   </form>
-   <!--------------------------------------------------------------------Table 6------------------------------------------------------------------>
-   <label for="table26" class="form-label fs-6" style=" font-weight: bold;">Table #6: List of data flows
-    </label>
-   <form id="ftbl26"  class="p-1 bg-white" action="">
-   <div class="table-responsive">
-   <table id="tbl26" class="table table-bordered  border border-1 border-info table-stripped">
-   <thead>
-     <th>From</th>
-     <th>Data Label</th>
-     <th>To</th>
-     
-     <th>Remove</th>
-     
-   </thead>
-   <tbody id="tbodytbt26">
-    
-   </tbody>
-   
-   </table>
-   </div> <!-- table 6 responsive div ended for exercise 2-->
-<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex2()" ><i class="bi bi-pencil-fill"></i>Draw</button></td>
+        <!--------------------------------------------------------------- Table 1---------------------------------------------------------------->
+      <label for="table21" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
+      <form id="ftbl21"  class="p-1 bg-white " action="">
+        <div class="card card-body border-1 border-dark">
+          <div class="form-group purple-border">
+          <textarea id="inp21" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
+        </div></div>
+        <button id="t21addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt21()" >Compile Program</button>
 </form>
+<!------------------------------------------------------------Table 2-------------------------------------------------------------------------->
+  <label for="table22" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
+  <form id="ftbl22"  class="p-1 bg-white " action="">
+    <div class="card card-body border-1 border-dark">
+      <textarea id="inp22" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="5" readonly></textarea>
+    </div>
+</form>
+  
+<!-------------------------------------------------------------- Table 3---------------------------------------------------------------------->
+
+<label for="table23" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
+  <form id="ftbl23"  class="p-1 bg-white " action="">
+    <div class="card card-body border-1 border-dark">
+      <textarea id="inp23" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly></textarea>
+    </div>
+</form>
+
+<!----------------------------------------------------------------------- Table 4 ------------------------------------------------------------->
+
+<label for="table24" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
+</label>
+  <br>
+<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex2()" ><i class="bi bi-pencil-fill"></i> Show</button></td>
+
 </div> <!-- column ended for exercise 2-->
 </div> <!--row ended for exrcise 2-->
 </div> <!--card body ended for exrcise 2-->
@@ -520,14 +288,141 @@ Author: Prakriti Dhang
 
 <div id="dispuml2" class="card border border-2 border-primary" style="display:none;">
   <div class="card-body">
-<div id="dfd_diag_ex2">
+<div id="cfg_diag_ex2">
 
 </div>
 </div></div>
    
-<!------------------------------------------------------Exercise 2----------------------------------------------------------->
+<!------------------------------------------------------Exercise 2 end----------------------------------------------------------->
+<!----------------------------------------Problem Statement Exercise 3-------------------------------------->
+
+<!----------------------------------------Problem Statement Exercise 3-------------------------------------->
+
+<div class="card border border-2 border-info p-2" id="exercise3" style="display:none;">
+  <div class="card-body">
+	<label for="prob3" class="form-label fs-5" style="color: brown; font-weight: bold;">Cyclomatic complexity of binary search</label>
+   <p class="fs-6" style="text-align: justify;">The following C program implements the binary search technique performed over an array of integers. This is an example of a non-trivial program that we often encounter in our lives.</p>
+
+   <p class="fs-6 border border-1 border-dark p-2">
+    #include &lt;stdio.h&gt;<br>
+    <br>
+    int<br>
+    main(int argc, char **argv)<br>
+    {<br>
+    &nbsp;&nbsp;     int a[] = {2, 4, 6, 8, 10, 12, 14, 16};    <br>
+    &nbsp;&nbsp;     int key = atoi(argv[1]);    <br>
+    &nbsp;&nbsp;     int n=8;<br>
+    &nbsp;&nbsp;     int low = 0;<br>
+    &nbsp;&nbsp;     int high = n - 1;<br>
+    &nbsp;&nbsp;     int middle;<br>
+    &nbsp;&nbsp;     int flag = 0<br>
+   
+         <br>
+    &nbsp;&nbsp;     while (low &lt;= high) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;         middle = (low + high) / 2;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (key == a[middle]) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Found key %d at position %d\n", key, middle);<br>
+          
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           flag = 1;<br>
+          
+          &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
+
+
+          &nbsp;&nbsp;&nbsp;&nbsp; else if (key &gt; a[middle]) {<br>
+          
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;               high = middle - 1;<br>
+          
+            &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
+          
+            &nbsp;&nbsp;&nbsp;&nbsp;           else {<br>
+            
+              &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;               low = middle + 1;<br>
+         
+              &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
+            
+              &nbsp;&nbsp;&nbsp;&nbsp;       if (flag)<br>
+           
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           break;<br>
+            
+        &nbsp;&nbsp;      }<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;   if (! flag)<br>
+
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  printf("Key %d was not found!\n", key);<br>
+
+          &nbsp;&nbsp;      return 0;<br>
+     }
+      
+   </p>
+   <p class="fs-6 ">Determine the cyclomatic complexity of this program. 
+    How would you classify this program in terms of its complexity (simple, complex, unstable)?</p>
+
+    <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for 
+      the main function. In other words, this would not work with user-defined functions. However, in real life a program
+       would contain several modules. All such modules have to be taken into account while determining the complexity.
+
+</p>
+</div> <!-- card body ended for exercise 3 problem statment-->
+</div> <!-- card ended for exercise 3 problem statement-->
+
+
+
+<!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
 
  
+<!------------------------------------------Exercise 3 -------------------------------------------->
+
+<div class="card border border-2 border-success p-2" id="ex3" style="display:none;">
+  <div class="card-body">
+    <div class="row">
+    <div class="col-md-12" >
+
+        <!--------------------------------------------------------------- Table 1---------------------------------------------------------------->
+      <label for="table31" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
+      <form id="ftbl31"  class="p-1 bg-white " action="">
+        <div class="card card-body border-1 border-dark">
+          <div class="form-group purple-border">
+          <textarea id="inp31" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
+        </div></div>
+        <button id="t31addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt31()" >Compile Program</button>
+</form>
+<!------------------------------------------------------------Table 2-------------------------------------------------------------------------->
+  <label for="table32" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
+  <form id="ftbl32"  class="p-1 bg-white " action="">
+    <div class="card card-body border-1 border-dark">
+      <textarea id="inp32" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="5" readonly></textarea>
+    </div>
+</form>
+  
+<!-------------------------------------------------------------- Table 3---------------------------------------------------------------------->
+
+<label for="table33" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
+  <form id="ftbl33"  class="p-1 bg-white " action="">
+    <div class="card card-body border-1 border-dark">
+      <textarea id="inp33" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly></textarea>
+    </div>
+</form>
+
+<!----------------------------------------------------------------------- Table 4 ------------------------------------------------------------->
+
+<label for="table34" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
+</label>
+  <br>
+<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex3()" ><i class="bi bi-pencil-fill"></i> Show</button></td>
+
+</div> <!-- column ended for exercise 2-->
+</div> <!--row ended for exrcise 2-->
+</div> <!--card body ended for exrcise 2-->
+</div> <!--card ended for exrcise 2-->
+
+<div id="dispuml3" class="card border border-2 border-primary" style="display:none;">
+  <div class="card-body">
+<div id="cfg_diag_ex3">
+
+</div>
+</div></div>
+   
+<!------------------------------------------------------Exercise 3 end----------------------------------------------------------->
   <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
 
 
