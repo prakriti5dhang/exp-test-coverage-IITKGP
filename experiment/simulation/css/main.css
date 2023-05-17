@@ -277,6 +277,22 @@ div.divscroll {
     border: 1px solid #ba68c8;
     box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
 }
+.dgreyc{
+  color: #4d4343;
+}
+.greyc{
+  color: #797979;
+  }
+  .pinkc{
+  color:rgb(252, 4, 190)
+  }
+  .bluec{
+  color: blue;
+  }
+  
+  .greenc{
+  color: rgb(18, 107, 0);
+  }
 
 /*footer {
     position: absolute;

@@ -78,24 +78,24 @@ Author: Prakriti Dhang
 				<div class="card border border-2 border-info p-2" id="exercise1" style="display:none;">
   <div class="card-body">
 	<label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold;">Identification of basic blocks from a program and determining it's cyclomatic complexity</label>
-   <p class="fs-6" style="text-align: justify;">Consider the following simple C program.</p>
-  <p class="fs-6 border border-1 border-dark p-2">
-    #include &lt;stdio.h&gt; 
+   <p class="fs-6" style="text-align: justify;">Consider the following simple C program: Sum of first n natural numbers</p>
+  <p class="fs-6 fw-bold border border-1 border-dark p-2">
+    <span class="dgreyc"> #include &lt;stdio.h&gt;</span> 
       <br><br>
-    int<br>
-    main(int argc, char **argv)<br>
+      <span class="greyc">int</span><br>
+    main(<span class="greyc">int</span> argc, <span class="greyc">char</span> **argv)<br>
     {<br>
-    &nbsp;&nbsp;    int i;<br>
-    &nbsp;&nbsp;    int sum;<br>
-    &nbsp;&nbsp;    int n = 10;<br>
+    &nbsp;&nbsp;    <span class="greyc">int</span> i;<br>
+    &nbsp;&nbsp;    <span class="greyc">int</span> sum;<br>
+    &nbsp;&nbsp;    <span class="greyc">int</span> n = 10;<br>
         <br>
         &nbsp;&nbsp;sum = 0;<br>
-        &nbsp;&nbsp;for (i = 1; i &lt;= n; i++)<br>
+        &nbsp;&nbsp;<span class="greenc">for</span> (i = 1; i &lt;= n; i++)<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += i;<br>
       
              <br>  
-             &nbsp;&nbsp;printf("Sum of first %d natural numbers is: %d\n", n, sum);<br>
-             &nbsp;&nbsp;return 0;<br>
+             &nbsp;&nbsp;<span class="pinkc">printf</span>(<span class="bluec">Sum of first %d natural numbers is: %d\n"</span>, n, sum);<br>
+             &nbsp;&nbsp;<span class="greenc">return</span> 0;<br>
         <br>
   }<br>
       
@@ -196,31 +196,32 @@ Author: Prakriti Dhang
 <div class="card border border-2 border-info p-2" id="exercise2" style="display:none;">
   <div class="card-body">
 	<label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold;">Finding linearly independent paths from a given program</label>
-   <p class="fs-6" style="text-align: justify;">Consider the following simple C program.</p>
+   <p class="fs-6" style="text-align: justify;">Consider the following simple C program: Initialize elements of a 2D array to 0
+  </p>
 
-   <p class="fs-6 border border-1 border-dark p-2">
-    #include &lt;stdio.h&gt;<br>
+   <p class="fs-6 fw-bold border border-1 border-dark p-2">
+    <span class="dgreyc"> #include &lt;stdio.h&gt;</span><br>
     <br>
-    int<br>
-    main(int argc, char **argv)<br>
+    <span class="greyc">int</span><br>
+    main(<span class="greyc">int</span> argc, <span class="greyc">char </span> **argv)<br>
     {<br>
-    &nbsp;&nbsp;     int a[5][10];<br>
-    &nbsp;&nbsp;     int i;<br>
-    &nbsp;&nbsp;     int j;<br>
-    &nbsp;&nbsp;     int nr;<br>
-    &nbsp;&nbsp;     int nc;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> a[5][10];<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> i;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> j;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> nr;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> nc;<br>
          <br>
     &nbsp;&nbsp;     nr = 5;<br>
     &nbsp;&nbsp;     nr = 5;<br>
     &nbsp;&nbsp;     nc = 10;<br>
          <br>
-    &nbsp;&nbsp;     for (i = 0; i &lt;= nr; i++) {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;         for (j = 0; j &lt;= nc; j++) {<br>
+    &nbsp;&nbsp;     <span class="greenc">for</span> (i = 0; i &lt;= nr; i++) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;        <span class="greenc">for</span>  (j = 0; j &lt;= nc; j++) {<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             a[i][j] = 0;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
         &nbsp;&nbsp;      }<br>
           <br>
-          &nbsp;&nbsp;      return 0;<br>
+          &nbsp;&nbsp;      <span class="greenc">return</span> 0;<br>
      }
       
    </p>
@@ -307,56 +308,57 @@ Author: Prakriti Dhang
 <div class="card border border-2 border-info p-2" id="exercise3" style="display:none;">
   <div class="card-body">
 	<label for="prob3" class="form-label fs-5" style="color: brown; font-weight: bold;">Cyclomatic complexity of binary search</label>
-   <p class="fs-6" style="text-align: justify;">The following C program implements the binary search technique performed over an array of integers. This is an example of a non-trivial program that we often encounter in our lives.</p>
+   <p class="fs-6" style="text-align: justify;">The following C program implements the binary search technique performed over an array of integers. 
+    This is an example of a non-trivial program that we often encounter in our lives.</p>
 
-   <p class="fs-6 border border-1 border-dark p-2">
-    #include &lt;stdio.h&gt;<br>
+   <p class="fs-6 fw-bold border border-1 border-dark p-2">
+   <span class="dgreyc"> #include &lt;stdio.h&gt;</span><br>
     <br>
-    int<br>
-    main(int argc, char **argv)<br>
+    <span class="greyc">int</span><br>
+    main(<span class="greyc">int</span> argc, <span class="greyc">char</span> **argv)<br>
     {<br>
-    &nbsp;&nbsp;     int a[] = {2, 4, 6, 8, 10, 12, 14, 16};    <br>
-    &nbsp;&nbsp;     int key = atoi(argv[1]);    <br>
-    &nbsp;&nbsp;     int n=8;<br>
-    &nbsp;&nbsp;     int low = 0;<br>
-    &nbsp;&nbsp;     int high = n - 1;<br>
-    &nbsp;&nbsp;     int middle;<br>
-    &nbsp;&nbsp;     int flag = 0<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> a[] = {2, 4, 6, 8, 10, 12, 14, 16};    <br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> key = atoi(argv[1]);    <br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> n=8;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> low = 0;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> high = n - 1;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> middle;<br>
+    &nbsp;&nbsp;     <span class="greyc">int</span> flag = 0<br>
    
          <br>
-    &nbsp;&nbsp;     while (low &lt;= high) {<br>
+    &nbsp;&nbsp;     <span class="greenc">while</span> (low &lt;= high) {<br>
       &nbsp;&nbsp;&nbsp;&nbsp;         middle = (low + high) / 2;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (key == a[middle]) {<br>
-          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("Found key %d at position %d\n", key, middle);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="greenc">if</span> (key == a[middle]) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pinkc">printf</span>(<span class="bluec">"Found key %d at position %d\n"</span>, key, middle);<br>
           
           &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           flag = 1;<br>
           
           &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
 
 
-          &nbsp;&nbsp;&nbsp;&nbsp; else if (key &gt; a[middle]) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; <span class="greenc">else if</span> (key &gt; a[middle]) {<br>
           
             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;               high = middle - 1;<br>
           
             &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
           
-            &nbsp;&nbsp;&nbsp;&nbsp;           else {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;           <span class="greenc">else </span> {<br>
             
               &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;               low = middle + 1;<br>
          
               &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
             
-              &nbsp;&nbsp;&nbsp;&nbsp;       if (flag)<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;       <span class="greenc"> if</span> (flag)<br>
            
               &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           break;<br>
             
         &nbsp;&nbsp;      }<br>
           <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;   if (! flag)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;   <span class="greenc"> if</span> (! flag)<br>
 
-          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  printf("Key %d was not found!\n", key);<br>
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  <span class="pinkc">printf</span>(<span class="bluec">"Key %d was not found!\n"</span>, key);<br>
 
-          &nbsp;&nbsp;      return 0;<br>
+          &nbsp;&nbsp;     <span class="greenc">return</span> 0;<br>
      }
       
    </p>
