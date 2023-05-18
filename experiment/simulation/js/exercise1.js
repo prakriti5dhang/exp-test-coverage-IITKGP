@@ -11,6 +11,35 @@ function addbtnt1(){
 
 }
 
+function calex1(){
+    var inpt1= document.getElementById("c1").value;
+    var inpt2= document.getElementById("c2").value;
+    var inpt3= document.getElementById("c3").value;
+
+    if((inpt1== 7)&&(inpt2== 7)&&(inpt3== 2)){
+
+         alert("All are correct!");
+         document.getElementById("c1").value="";
+         document.getElementById("c2").value="";
+         document.getElementById("c3").value="";
+    }
+
+    else if((inpt1 != 7)){
+       alert("Incorrect. Check no of nodes");
+    }
+
+    else if((inpt2 != 7)){
+        alert("Incorrect. Check no of edges");
+     }
+
+     else if((inpt3 != 2)){
+        alert("Incorrect. Check Cyclomatic Complexity");
+     }
+
+    else{
+        alert("Try Again")
+    }
+}
 /********************************************* Function to show CFG ****************************************/
 
 

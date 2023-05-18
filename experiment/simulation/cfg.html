@@ -7,159 +7,171 @@ Author: Prakriti Dhang
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.2/joint.css" />
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.2/joint.css" />
 
 
 
 
 
-   
+
 </head>
+
 <body>
   <header id="header">
     <div class="container-fluid p-3 ">
       <div class="card">
-      <div class="row">
-        <div class="col-md-2">
-        <img src="images/vlabs-logo.png" class=" rounded img-fluid" alt="vlabs-logo" >
+        <div class="row">
+          <div class="col-md-2">
+            <img src="images/vlabs-logo.png" class=" rounded img-fluid" alt="vlabs-logo">
+          </div>
+          <div class="col-md-8 p-4">
+            <p class="h2 fw-bold text-primary text-center"> Virtual Lab IIT Kharagpur</p>
+          </div>
+          <div class="col-md-2">
+            <img src="images/iitkgp-logo.png" class=" rounded img-fluid" alt="iitkgplogo">
+          </div>
+        </div>
       </div>
-      <div class="col-md-8 p-4">
-        <p class="h2 fw-bold text-primary text-center"> Virtual Lab IIT Kharagpur</p>
-      </div>
-      <div class="col-md-2">
-        <img src="images/iitkgp-logo.png" class=" rounded img-fluid" alt="iitkgplogo" >
-      </div>
-      </div>
-    </div>
     </div>
   </header>
- 
+
   <div class="container-fluid p-2 ">
-<hr>
-    <p class="h3 fw-bold fst-italic text-center" style="color: #000283;">Estimation of Test Coverage Metrics and Structural Complexity</p>
- <hr>
-</div>
+    <hr>
+    <p class="h3 fw-bold fst-italic text-center" style="color: #000283;">Estimation of Test Coverage Metrics and
+      Structural Complexity</p>
+    <hr>
+  </div>
 
-	<div class="container-fluid mt-2 p-3">
-		
-        <div class="d-flex flex-column justify-content-center mb-3 ">  
-				
+  <div class="container-fluid mt-2 p-3">
 
-<div class="card border border-2 border-primary p-2">
-  <div class="card-body">
-	<label class="form-label fw-bold fs-5">Select a problem from the dropdown list shown below</label>
-   <select id="selectex" class="form-select float-center border border-2 border-primary" aria-label="Default select example" onchange="subex()">
-  <option value="0" selected>Exercise #</option>
-  <option value="1">Exercise 1</option>
-  <option value="2">Exercise 2</option>
-  <option value="3">Exercise 3</option>
-  
-</select>
-<br>
-<!--p class="fw-bold fs-6" id="para1" style="display: none;">Click Submit to View Solution</p>
+    <div class="d-flex flex-column justify-content-center mb-3 ">
+
+
+      <div class="card border border-2 border-primary p-2">
+        <div class="card-body">
+          <label class="form-label fw-bold fs-5">Select a problem from the dropdown list shown below</label>
+          <select id="selectex" class="form-select float-center border border-2 border-primary"
+            aria-label="Default select example" onchange="subex()">
+            <option value="0" selected>Exercise #</option>
+            <option value="1">Exercise 1</option>
+            <option value="2">Exercise 2</option>
+            <option value="3">Exercise 3</option>
+
+          </select>
+          <br>
+          <!--p class="fw-bold fs-6" id="para1" style="display: none;">Click Submit to View Solution</p>
 <button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn" onclick="viewsolutionb()" disabled>Submit</button-->
 
-  </div> <!-- card body ended for select exercise div-->
-</div> <!-- card ended for select exercise div-->
-
-		
-  
-
-		
-			<!----------------------------------------Problem Statement Exercise 1-------------------------------------->
-
-				<div class="card border border-2 border-info p-2" id="exercise1" style="display:none;">
-  <div class="card-body">
-	<label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold;">Identification of basic blocks from a program and determining it's cyclomatic complexity</label>
-   <p class="fs-6" style="text-align: justify;">Consider the following simple C program: Sum of first n natural numbers</p>
-  <p class="fs-6 fw-bold border border-1 border-dark p-2">
-    <span class="dgreyc"> #include &lt;stdio.h&gt;</span> 
-      <br><br>
-      <span class="greyc">int</span><br>
-    main(<span class="greyc">int</span> argc, <span class="greyc">char</span> **argv)<br>
-    {<br>
-    &nbsp;&nbsp;    <span class="greyc">int</span> i;<br>
-    &nbsp;&nbsp;    <span class="greyc">int</span> sum;<br>
-    &nbsp;&nbsp;    <span class="greyc">int</span> n = 10;<br>
-        <br>
-        &nbsp;&nbsp;sum = 0;<br>
-        &nbsp;&nbsp;<span class="greenc">for</span> (i = 1; i &lt;= n; i++)<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += i;<br>
-      
-             <br>  
-             &nbsp;&nbsp;<span class="pinkc">printf</span>(<span class="bluec">Sum of first %d natural numbers is: %d\n"</span>, n, sum);<br>
-             &nbsp;&nbsp;<span class="greenc">return</span> 0;<br>
-        <br>
-  }<br>
-      
-  </p>
-  <p class="fs-6" style="text-align: justify;">
-    Any sequence of instructions in a program could be represented in terms of basic blocks, and a CFG could be 
-    drawn using those basic blocks. For the given C program:
-  </p>
-  <ul class="fs-6">
-    <li>Identify the basic blocks and verify whether your representation matches with the output produced after 
-      compiling your program</li>
-    <li>Draw a Control Flow Graph (CFG) using these basic blocks. Again, verify how the CFG generated after 
-      compilation relates to the basic blocks identified by the compiler</li>
-    <li>Calculate McCabe's complexity from the CFG so obtained</li>
-    </ul>
-  <p class="fs-6 fw-bold">Learning Objectives:</p>
-  <ul class="fs-6"> 
-    <li>Identify the basic basic blocks for a given program</li>
-    <li>Draw a CFG using the basic blocks</li>
-    <li>Determination of McCabe's complexity from a CFG</li>
-  </ul>
-  <p class="fs-6" style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function for the above code. 
-    In other words, this would not work with user-defined functions. However, in real life a program would contain 
-    several modules. All such modules have to be taken into account while determining the complexity.</p>
-</div> <!-- card body ended for exercise 1 problem statment-->
-</div> <!-- card ended for exercise 1 problem statement-->
+        </div> <!-- card body ended for select exercise div-->
+      </div> <!-- card ended for select exercise div-->
 
 
 
-<!----------------------------------------Problem Statement Exercise 1 complete-------------------------------------->
 
 
-	<!------------------------------------------Exercise 1 -------------------------------------------->
+      <!----------------------------------------Problem Statement Exercise 1-------------------------------------->
 
-<div class="card border border-2 border-success p-2" id="ex1" style="display:none;">
-  <div class="card-body">
-    <div class="row">
-    <div class="col-md-11" >
+      <div class="card border border-2 border-info p-2" id="exercise1" style="display:none;">
+        <div class="card-body">
+          <label for="prob1" class="form-label fs-5" style="color: brown; font-weight: bold;">Identification of basic
+            blocks from a program and determining it's cyclomatic complexity</label>
+          <p class="fs-6" style="text-align: justify;">Consider the following simple C program: Sum of first n natural
+            numbers</p>
+          <p class="fs-6 fw-bold border border-1 border-dark p-2">
+            <span class="dgreyc"> #include &lt;stdio.h&gt;</span>
+            <br><br>
+            <span class="greyc">int</span><br>
+            main(<span class="greyc">int</span> argc, <span class="greyc">char</span> **argv)<br>
+            {<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> i;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> sum;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> n = 10;<br>
+            <br>
+            &nbsp;&nbsp;sum = 0;<br>
+            &nbsp;&nbsp;<span class="greenc">for</span> (i = 1; i &lt;= n; i++)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum += i;<br>
 
-      <!--------------------------------------------------------------- Lable 1---------------------------------------------------------------->
-      <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
+            <br>
+            &nbsp;&nbsp;<span class="pinkc">printf</span>(<span class="bluec">Sum of first %d natural numbers is:
+              %d\n"</span>, n, sum);<br>
+            &nbsp;&nbsp;<span class="greenc">return</span> 0;<br>
+            <br>
+            }<br>
+
+          </p>
+          <p class="fs-6" style="text-align: justify;">
+            Any sequence of instructions in a program could be represented in terms of basic blocks, and a CFG could be
+            drawn using those basic blocks. For the given C program:
+          </p>
+          <ul class="fs-6">
+            <li>Identify the basic blocks and verify whether your representation matches with the output produced after
+              compiling your program</li>
+            <li>Draw a Control Flow Graph (CFG) using these basic blocks. Again, verify how the CFG generated after
+              compilation relates to the basic blocks identified by the compiler</li>
+            <li>Calculate McCabe's complexity from the CFG so obtained</li>
+          </ul>
+          <p class="fs-6 fw-bold">Learning Objectives:</p>
+          <ul class="fs-6">
+            <li>Identify the basic basic blocks for a given program</li>
+            <li>Draw a CFG using the basic blocks</li>
+            <li>Determination of McCabe's complexity from a CFG</li>
+          </ul>
+          <p class="fs-6" style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only
+            for the main function for the above code.
+            In other words, this would not work with user-defined functions. However, in real life a program would
+            contain
+            several modules. All such modules have to be taken into account while determining the complexity.</p>
+        </div> <!-- card body ended for exercise 1 problem statment-->
+      </div> <!-- card ended for exercise 1 problem statement-->
+
+
+
+      <!----------------------------------------Problem Statement Exercise 1 complete-------------------------------------->
+
+
+      <!------------------------------------------Exercise 1 -------------------------------------------->
+
+      <div class="card border border-2 border-success p-2" id="ex1" style="display:none;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-11">
+
+              <!--------------------------------------------------------------- Lable 1---------------------------------------------------------------->
+              <!--label for="table1" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
       <form id="ftbl1"  class="p-1 bg-white " action="">
         <div class="card card-body border-1 border-dark">
           <div class="form-group green-border">
           <textarea id="inp1" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
         </div></div>
-        <br>
-        <button id="t1addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt1()" >Compile Program</button>
-</form>
-<br>
-<!------------------------------------------------------------Lable 2-------------------------------------------------------------------------->
-  <label for="table2" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
+        <br-->
+              <button id="t1addbtn" class="btn btn-warning border border-1 border-dark" type="button"
+                onclick="addbtnt1()">Show Program Representation</button>
+              <!--/form-->
+              <br>
+              <!------------------------------------------------------------Lable 2-------------------------------------------------------------------------->
+              <!--label for="table2" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
   <form id="ftbl2"  class="p-1 bg-white " action="">
     <div class="card card-body border-1 border-dark">
       <textarea id="inp2" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="5" readonly></textarea>
     </div>
-</form>
-  
-<!-------------------------------------------------------------- Lable 3---------------------------------------------------------------------->
+</form-->
 
-<label for="table3" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
-  <form id="ftbl3"  class="p-1 bg-white " action="">
-    <div class="card card-body border-1 border-dark">
-      <textarea id="inp3" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly style="display: none;">
+              <!-------------------------------------------------------------- Lable 3---------------------------------------------------------------------->
+
+              <label for="table3" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of
+                Basic Blocks</label>
+              <form id="ftbl3" class="p-1 bg-white " action="">
+                <div class="card card-body border-1 border-dark">
+                  <textarea id="inp3" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10"
+                    readonly style="display: none;">
         ;; Function main (main)
 
         Merging blocks 5 and 6
@@ -194,144 +206,158 @@ Author: Prakriti Dhang
           return D.2055;
         
         }</textarea>
-    </div>
-</form>
+                </div>
+              </form>
 
 
 
 
-  
-
-<br>
-<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()" disabled> <i class="bi bi-pencil-fill"></i> Show</button>
-
-</div> <!-- column ended for exercise 1-->
-</div> <!--row ended for exrcise 1-->
-</div> <!--card body ended for exrcise 1-->
-</div> <!--card ended for exrcise 1-->
-
-<div id="dispuml1" class="card border border-2 border-primary" style="display:none;">
-  <div class="card-body">
-    <!-------------------------------------------------------------- Lable 4---------------------------------------------------------------------->
-    <label for="table4" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
-    </label>
-<div id="cfg_diag_ex1">
-<img src="./images/cfg1.png" alt="cfg1">
-</div>
-</div>
-</div>
-<div id="calcompl1" class="card " style="display:none;">
-  <div class="card-body purple-border rounded-1">
-    <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
-    <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic complexity
-    </label>
-    <div class="input-group mb-3 ">
-      <span class="input-group-text" id="basic-addon1" >No. of Nodes (N)</span>
-      <input type="number" class="form-control" id="c1"  aria-describedby="basic-addon1">
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">No. of Edges (E) </span>
-      <input type="number" class="form-control" id="c2"  aria-describedby="basic-addon1">
-    </div>
-
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
-      <input type="number" class="form-control" id="c3" placeholder="E - N + 2"  aria-describedby="basic-addon1">
-    </div>
-    <button id="calbtn" class="btn btn-success" type="button" onclick="calex1()" disabled>  Submit</button>
-    </div>
-    </div>
-    
-<!--------------------------------------------------- Exercise 1 complete--------------------------------------------------------->
 
 
-<!----------------------------------------Problem Statement Exercise 2-------------------------------------->
+              <br>
+              <button id="drawbtn" class="btn btn-primary border border-dark" type="button" onclick="drawbtex1()"
+                disabled> Show Control Flow Graph</button>
 
-<div class="card border border-2 border-info p-2" id="exercise2" style="display:none;">
-  <div class="card-body">
-	<label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold;">Finding linearly independent paths from a given program</label>
-   <p class="fs-6" style="text-align: justify;">Consider the following simple C program: Initialize elements of a 2D array to 0
-  </p>
+            </div> <!-- column ended for exercise 1-->
+          </div> <!--row ended for exrcise 1-->
+        </div> <!--card body ended for exrcise 1-->
+      </div> <!--card ended for exrcise 1-->
 
-   <p class="fs-6 fw-bold border border-1 border-dark p-2">
-    <span class="dgreyc"> #include &lt;stdio.h&gt;</span><br>
-    <br>
-    <span class="greyc">int</span><br>
-    main(<span class="greyc">int</span> argc, <span class="greyc">char </span> **argv)<br>
-    {<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> a[5][10];<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> i;<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> j;<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> nr;<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> nc;<br>
-         <br>
-    &nbsp;&nbsp;     nr = 5;<br>
-    &nbsp;&nbsp;     nr = 5;<br>
-    &nbsp;&nbsp;     nc = 10;<br>
-         <br>
-    &nbsp;&nbsp;     <span class="greenc">for</span> (i = 0; i &lt;= nr; i++) {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;        <span class="greenc">for</span>  (j = 0; j &lt;= nc; j++) {<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             a[i][j] = 0;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
-        &nbsp;&nbsp;      }<br>
-          <br>
-          &nbsp;&nbsp;      <span class="greenc">return</span> 0;<br>
-     }
-      
-   </p>
-   <p class="fs-6 fw-bold">Tasks:</p>
-<ul>
-  <li>Compile the above program to generate it's CFG. Verify whetther the CFG corresponds to the basic blocks</li>
-  <li>Identify the linearly independent paths from the CFG. The paths would be indicated by the basic block numbers (instead of line numbers of the actual program)
-   </li>
-</ul>
-   <p class="fs-6 fw-bold">Learning Objectives:</p>
-   
-   <ul>
-    <li> Identify the linearly independent paths from a CFG</li></ul>
-    <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function for the above code. In other words, this would not work with user-defined functions. However, in real life a program would contain several modules. All such modules have to be taken into account while determining the complexity.
+      <div id="dispuml1" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <!-------------------------------------------------------------- Lable 4---------------------------------------------------------------------->
+          <label for="table4" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
+          </label>
+          <div id="cfg_diag_ex1">
+            <img src="./images/cfg1.png" alt="cfg1">
+          </div>
+        </div>
+      </div>
+      <div id="calcompl1" class="card " style="display:none;">
+        <div class="card-body purple-border rounded-1">
+          <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
+          <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's Cyclomatic
+            Complexity
+          </label>
+          <div class="input-group mb-3 ">
+            <span class="input-group-text" id="basic-addon1">No. of Nodes (N)</span>
+            <input type="number" class="form-control" id="c1" aria-describedby="basic-addon1">
+          </div>
 
-</p>
-</div> <!-- card body ended for exercise 1 problem statment-->
-</div> <!-- card ended for exercise 1 problem statement-->
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">No. of Edges (E) </span>
+            <input type="number" class="form-control" id="c2" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+            <input type="number" class="form-control" id="c3" placeholder="E - N + 2" aria-describedby="basic-addon1">
+          </div>
+          <button id="calbtn" class="btn btn-success border border-dark" type="button" onclick="calex1()" disabled>
+            Submit</button>
+        </div>
+      </div>
+
+      <!--------------------------------------------------- Exercise 1 complete--------------------------------------------------------->
 
 
+      <!----------------------------------------Problem Statement Exercise 2-------------------------------------->
 
-<!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
+      <div class="card border border-2 border-info p-2" id="exercise2" style="display:none;">
+        <div class="card-body">
+          <label for="prob2" class="form-label fs-5" style="color: brown; font-weight: bold;">Finding linearly
+            independent paths from a given program</label>
+          <p class="fs-6" style="text-align: justify;">Consider the following simple C program: Initialize elements of a
+            2D array to 0
+          </p>
+
+          <p class="fs-6 fw-bold border border-1 border-dark p-2">
+            <span class="dgreyc"> #include &lt;stdio.h&gt;</span><br>
+            <br>
+            <span class="greyc">int</span><br>
+            main(<span class="greyc">int</span> argc, <span class="greyc">char </span> **argv)<br>
+            {<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> a[5][10];<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> i;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> j;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> nr;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> nc;<br>
+            <br>
+            &nbsp;&nbsp; nr = 5;<br>
+            &nbsp;&nbsp; nr = 5;<br>
+            &nbsp;&nbsp; nc = 10;<br>
+            <br>
+            &nbsp;&nbsp; <span class="greenc">for</span> (i = 0; i &lt;= nr; i++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <span class="greenc">for</span> (j = 0; j &lt;= nc; j++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a[i][j] = 0;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+            &nbsp;&nbsp; }<br>
+            <br>
+            &nbsp;&nbsp; <span class="greenc">return</span> 0;<br>
+            }
+
+          </p>
+          <p class="fs-6 fw-bold">Tasks:</p>
+          <ul>
+            <li>Compile the above program to generate it's CFG. Verify whetther the CFG corresponds to the basic blocks
+            </li>
+            <li>Identify the linearly independent paths from the CFG. The paths would be indicated by the basic block
+              numbers (instead of line numbers of the actual program)
+            </li>
+          </ul>
+          <p class="fs-6 fw-bold">Learning Objectives:</p>
+
+          <ul>
+            <li> Identify the linearly independent paths from a CFG</li>
+          </ul>
+          <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only
+            for the main function for the above code. In other words, this would not work with user-defined functions.
+            However, in real life a program would contain several modules. All such modules have to be taken into
+            account while determining the complexity.
+
+          </p>
+        </div> <!-- card body ended for exercise 1 problem statment-->
+      </div> <!-- card ended for exercise 1 problem statement-->
 
 
-<!------------------------------------------Exercise 2 -------------------------------------------->
 
-<div class="card border border-2 border-success p-2" id="ex2" style="display:none;">
-  <div class="card-body">
-    <div class="row">
-    <div class="col-md-12" >
+      <!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
 
-        <!--------------------------------------------------------------- Lable 1---------------------------------------------------------------->
-      <label for="table21" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
+
+      <!------------------------------------------Exercise 2 -------------------------------------------->
+
+      <div class="card border border-2 border-success p-2" id="ex2" style="display:none;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+
+              <!--------------------------------------------------------------- Lable 1---------------------------------------------------------------->
+              <!--label for="table21" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
       <form id="ftbl21"  class="p-1 bg-white " action="">
         <div class="card card-body border-1 border-dark">
           <div class="form-group green-border">
           <textarea id="inp21" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
-        </div></div>   <br>
-        <button id="t21addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt21()" >Compile Program</button>
-</form>
-<br>
-<!------------------------------------------------------------Lable 2-------------------------------------------------------------------------->
-  <label for="table22" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
+        </div></div--> <br>
+              <button id="t21addbtn" class="btn btn-warning border border-1 border-dark" type="button"
+                onclick="addbtnt21()">Show Program Representation</button>
+              <!--/form-->
+              <br>
+              <!------------------------------------------------------------Lable 2-------------------------------------------------------------------------->
+              <!--label for="table22" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
   <form id="ftbl22"  class="p-1 bg-white " action="">
     <div class="card card-body border-1 border-dark">
       <textarea id="inp22" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="5" readonly></textarea>
     </div>
-</form>
-  
-<!-------------------------------------------------------------- Lable 3---------------------------------------------------------------------->
+</form-->
 
-<label for="table23" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
-  <form id="ftbl23"  class="p-1 bg-white " action="">
-    <div class="card card-body border-1 border-dark">
-      <textarea id="inp23" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly style="display: none;">
+              <!-------------------------------------------------------------- Lable 3---------------------------------------------------------------------->
+
+              <label for="table23" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms
+                of Basic Blocks</label>
+              <form id="ftbl23" class="p-1 bg-white " action="">
+                <div class="card card-body border-1 border-dark">
+                  <textarea id="inp23" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10"
+                    readonly style="display: none;">
         ;; Function main (main)
 
 Merging blocks 8 and 9
@@ -384,161 +410,228 @@ main (int argc, char * * argv)
 }
 
       </textarea>
-    </div>
-</form>
+                </div>
+              </form>
 
 
-  <br>
-<button id="drawbtn2" class="btn btn-primary" type="button" onclick="drawbtex2()" disabled><i class="bi bi-pencil-fill"></i> Show</button>
+              <br>
+              <button id="drawbtn2" class="btn btn-primary border-dark" type="button" onclick="drawbtex2()" disabled>
+                Show Control Flow Graph</button>
 
-</div> <!-- column ended for exercise 2-->
-</div> <!--row ended for exrcise 2-->
-</div> <!--card body ended for exrcise 2-->
-</div> <!--card ended for exrcise 2-->
+            </div> <!-- column ended for exercise 2-->
+          </div> <!--row ended for exrcise 2-->
+        </div> <!--card body ended for exrcise 2-->
+      </div> <!--card ended for exrcise 2-->
 
-<div id="dispuml2" class="card border border-2 border-primary" style="display:none;">
-  <div class="card-body">
-    <!----------------------------------------------------------------------- Lable 4 ------------------------------------------------------------->
+      <div id="dispuml2" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <!----------------------------------------------------------------------- Lable 4 ------------------------------------------------------------->
 
-<label for="table24" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
-</label>
-<div id="cfg_diag_ex2">
-<img src="./images/cfg2.png" alt="cfg2">
-</div>
-</div></div>
+          <label for="table24" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
+          </label>
+          <div id="cfg_diag_ex2">
+            <img src="./images/cfg2.png" alt="cfg2">
+          </div>
+        </div>
+      </div>
 
-<div id="calcompl2" class="card " style="display:none;">
-  <div class="card-body purple-border rounded-1">
-    <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
-    <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic complexity
-    </label>
-    <div class="input-group mb-3 ">
-      <span class="input-group-text" id="basic-addon1" >No. of Nodes (N)</span>
-      <input type="number" class="form-control" id="c21"  aria-describedby="basic-addon1">
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">No. of Edges (E)</span>
-      <input type="number" class="form-control" id="c22"  aria-describedby="basic-addon1">
-    </div>
+      <div id="calcompl2" class="card " style="display:none;">
+        <div class="card-body purple-border rounded-1">
+          <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
+          <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic
+            complexity
+          </label>
+          <div class="input-group mb-3 ">
+            <span class="input-group-text fs-5" id="basic-addon1">No. of Nodes (N)</span>
+            <input type="number" class="form-control" id="c21" aria-describedby="basic-addon1">
+          </div>
 
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
-      <input type="number" class="form-control" id="c23" placeholder="E - N + 2" aria-describedby="basic-addon1">
-    </div>
-    <button id="calbtn2" class="btn btn-success" type="button" onclick="calex2()" disabled>  Submit</button>
-    </div>
-    </div>
-   
-<!------------------------------------------------------Exercise 2 end----------------------------------------------------------->
-<!----------------------------------------Problem Statement Exercise 3-------------------------------------->
+          <div class="input-group mb-3">
+            <span class="input-group-text fs-5" id="basic-addon1">No. of Edges (E)</span>
+            <input type="number" class="form-control" id="c22" aria-describedby="basic-addon1">
+          </div>
 
-<!----------------------------------------Problem Statement Exercise 3-------------------------------------->
+          <div class="input-group mb-3">
+            <span class="input-group-text fs-5" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+            <input type="number" class="form-control" id="c23" placeholder="E - N + 2" aria-describedby="basic-addon1">
+          </div>
+          <button id="calbtn2" class="btn btn-success border-dark" type="button" onclick="calex2()" disabled>
+            Submit</button>
+        </div>
+      </div>
+      <div id="linearpath2" class="card " style="display:none;">
+        <div class="card-body orange-border rounded-1">
+          <label for="table5" class="form-label fs-6" style=" font-weight: bold;">The linearly independent paths for the
+            above CFG are:</label>
+            <div class="input-group mb-3 ">
+              <span class="input-group-text  fs-5" id="basic-addon1">Path 1</span>
+              <input type="number" class="form-control" id="p1" aria-describedby="basic-addon1">
+              <span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2" aria-describedby="basic-addon1">
+              <span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3" aria-describedby="basic-addon1">
+              <span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p4" aria-describedby="basic-addon1">
+              <button id="chkbtn1" class="btn btn-success border-dark" type="button" onclick="chkex21()" disabled>
+                Check</button>
+            </div>
 
-<div class="card border border-2 border-info p-2" id="exercise3" style="display:none;">
-  <div class="card-body">
-	<label for="prob3" class="form-label fs-5" style="color: brown; font-weight: bold;">Cyclomatic complexity of binary search</label>
-   <p class="fs-6" style="text-align: justify;">The following C program implements the binary search technique performed over an array of integers. 
-    This is an example of a non-trivial program that we often encounter in our lives.</p>
+            <div class="input-group mb-3 ">
+              <span class="input-group-text fs-5" id="basic-addon1">Path 2</span>
+              <input type="number" class="form-control" id="p2a" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2b" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2c" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2d" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2e" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2f" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2g" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p2h" aria-describedby="basic-addon1">
+              <button id="chkbtn2" class="btn btn-success border-dark" type="button" onclick="chkex22()" disabled>
+                Check</button>
+            </div>
+            <div class="input-group mb-3 ">
+              <span class="input-group-text fs-5" id="basic-addon1">Path 3</span>
+              <input type="number" class="form-control" id="p3a" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3b" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3c" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3d" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3e" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3f" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3g" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3h" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3i" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control" id="p3j" aria-describedby="basic-addon1">
+              <button id="chkbtn3" class="btn btn-success border-dark" type="button" onclick="chkex23()" disabled>
+                Check</button>
+            </div>
 
-   <p class="fs-6 fw-bold border border-1 border-dark p-2">
-   <span class="dgreyc"> #include &lt;stdio.h&gt;</span><br>
-    <br>
-    <span class="greyc">int</span><br>
-    main(<span class="greyc">int</span> argc, <span class="greyc">char</span> **argv)<br>
-    {<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> a[] = {2, 4, 6, 8, 10, 12, 14, 16};    <br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> key = atoi(argv[1]);    <br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> n=8;<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> low = 0;<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> high = n - 1;<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> middle;<br>
-    &nbsp;&nbsp;     <span class="greyc">int</span> flag = 0<br>
-   
-         <br>
-    &nbsp;&nbsp;     <span class="greenc">while</span> (low &lt;= high) {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;         middle = (low + high) / 2;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="greenc">if</span> (key == a[middle]) {<br>
-          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pinkc">printf</span>(<span class="bluec">"Found key %d at position %d\n"</span>, key, middle);<br>
-          
-          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           flag = 1;<br>
-          
-          &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
-
-
-          &nbsp;&nbsp;&nbsp;&nbsp; <span class="greenc">else if</span> (key &gt; a[middle]) {<br>
-          
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;               high = middle - 1;<br>
-          
-            &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
-          
-            &nbsp;&nbsp;&nbsp;&nbsp;           <span class="greenc">else </span> {<br>
             
-              &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;               low = middle + 1;<br>
-         
-              &nbsp;&nbsp;&nbsp;&nbsp;          }<br>
-            
-              &nbsp;&nbsp;&nbsp;&nbsp;       <span class="greenc"> if</span> (flag)<br>
-           
-              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           break;<br>
-            
-        &nbsp;&nbsp;      }<br>
-          <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;   <span class="greenc"> if</span> (! flag)<br>
+        </div>
+      </div>
 
-          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  <span class="pinkc">printf</span>(<span class="bluec">"Key %d was not found!\n"</span>, key);<br>
+      <!------------------------------------------------------Exercise 2 end----------------------------------------------------------->
+      <!----------------------------------------Problem Statement Exercise 3-------------------------------------->
 
-          &nbsp;&nbsp;     <span class="greenc">return</span> 0;<br>
-     }
-      
-   </p>
-   <p class="fs-6 ">Determine the cyclomatic complexity of this program. 
-    How would you classify this program in terms of its complexity (simple, complex, unstable)?</p>
+      <!----------------------------------------Problem Statement Exercise 3-------------------------------------->
 
-    <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for 
-      the main function for the above code. In other words, this would not work with user-defined functions. However, in real life a program
-       would contain several modules. All such modules have to be taken into account while determining the complexity.
+      <div class="card border border-2 border-info p-2" id="exercise3" style="display:none;">
+        <div class="card-body">
+          <label for="prob3" class="form-label fs-5" style="color: brown; font-weight: bold;">Cyclomatic complexity of
+            binary search</label>
+          <p class="fs-6" style="text-align: justify;">The following C program implements the binary search technique
+            performed over an array of integers.
+            This is an example of a non-trivial program that we often encounter in our lives.</p>
 
-</p>
-</div> <!-- card body ended for exercise 3 problem statment-->
-</div> <!-- card ended for exercise 3 problem statement-->
+          <p class="fs-6 fw-bold border border-1 border-dark p-2">
+            <span class="dgreyc"> #include &lt;stdio.h&gt;</span><br>
+            <br>
+            <span class="greyc">int</span><br>
+            main(<span class="greyc">int</span> argc, <span class="greyc">char</span> **argv)<br>
+            {<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> a[] = {2, 4, 6, 8, 10, 12, 14, 16}; <br>
+            &nbsp;&nbsp; <span class="greyc">int</span> key = atoi(argv[1]); <br>
+            &nbsp;&nbsp; <span class="greyc">int</span> n=8;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> low = 0;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> high = n - 1;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> middle;<br>
+            &nbsp;&nbsp; <span class="greyc">int</span> flag = 0<br>
+
+            <br>
+            &nbsp;&nbsp; <span class="greenc">while</span> (low &lt;= high) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; middle = (low + high) / 2;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="greenc">if</span> (key == a[middle]) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pinkc">printf</span>(<span
+              class="bluec">"Found key %d at position %d\n"</span>, key, middle);<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; flag = 1;<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp; <span class="greenc">else if</span> (key &gt; a[middle]) {<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; high = middle - 1;<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; <span class="greenc">else </span> {<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; low = middle + 1;<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; <span class="greenc"> if</span> (flag)<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+
+            &nbsp;&nbsp; }<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; <span class="greenc"> if</span> (! flag)<br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <span class="pinkc">printf</span>(<span class="bluec">"Key
+              %d was not found!\n"</span>, key);<br>
+
+            &nbsp;&nbsp; <span class="greenc">return</span> 0;<br>
+            }
+
+          </p>
+          <p class="fs-6 ">Determine the cyclomatic complexity of this program.
+            How would you classify this program in terms of its complexity (simple, complex, unstable)?</p>
+
+          <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only
+            for
+            the main function for the above code. In other words, this would not work with user-defined functions.
+            However, in real life a program
+            would contain several modules. All such modules have to be taken into account while determining the
+            complexity.
+
+          </p>
+        </div> <!-- card body ended for exercise 3 problem statment-->
+      </div> <!-- card ended for exercise 3 problem statement-->
 
 
 
-<!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
+      <!----------------------------------------Problem Statement Exercise 2 complete-------------------------------------->
 
- 
-<!------------------------------------------Exercise 3 -------------------------------------------->
 
-<div class="card border border-2 border-success p-2" id="ex3" style="display:none;">
-  <div class="card-body ">
-    <div class="row">
-    <div class="col-md-12" >
+      <!------------------------------------------Exercise 3 -------------------------------------------->
 
-        <!--------------------------------------------------------------- Lable 1---------------------------------------------------------------->
-      <label for="table31" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
-      <form id="ftbl31"  class="p-1 bg-white " action="">
-        <div class="card card-body border-1 border-dark">
-          <div class="form-group green-border">
-          <textarea id="inp31" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
-        </div></div>   <br>
-        <button id="t31addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt31()" >Compile Program</button>
-</form>
-<br>
-<!------------------------------------------------------------Lable 2-------------------------------------------------------------------------->
-  <label for="table32" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if any)</label>
-  <form id="ftbl32"  class="p-1 bg-white " action="">
-    <div class="card card-body border-1 border-dark">
-      <textarea id="inp32" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="5" readonly></textarea>
-    </div>
-</form>
-  
-<!-------------------------------------------------------------- Lable 3---------------------------------------------------------------------->
+      <div class="card border border-2 border-success p-2" id="ex3" style="display:none;">
+        <div class="card-body ">
+          <div class="row">
+            <div class="col-md-12">
 
-<label for="table33" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
-  <form id="ftbl33"  class="p-1 bg-white " action="">
-    <div class="card card-body border-1 border-dark">
-      <textarea id="inp33" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly style="display: none;">
+              <!--------------------------------------------------------------- Lable 1---------------------------------------------------------------->
+              <!--label for="table31" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
+              <form id="ftbl31" class="p-1 bg-white " action="">
+                <div class="card card-body border-1 border-dark">
+                  <div class="form-group green-border">
+                    <textarea id="inp31" class="form-control rounded-0 " id="exampleFormControlTextarea1"
+                      placeholder="Write the above code here..." rows="10"></textarea>
+                  </div>
+                </div--> <br>
+                <button id="t31addbtn" class="btn btn-warning border border-1 border-dark" type="button"
+                  onclick="addbtnt31()">Show Program Representation</button>
+              <!--/form-->
+              <br>
+              <!------------------------------------------------------------Lable 2-------------------------------------------------------------------------->
+              <!--label for="table32" class="form-label fs-6" style=" font-weight: bold;">Compilation error (if
+                any)</label>
+              <form id="ftbl32" class="p-1 bg-white " action="">
+                <div class="card card-body border-1 border-dark">
+                  <textarea id="inp32" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="5"
+                    readonly></textarea>
+                </div>
+              </form-->
+
+              <!-------------------------------------------------------------- Lable 3---------------------------------------------------------------------->
+
+              <label for="table33" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms
+                of Basic Blocks</label>
+              <form id="ftbl33" class="p-1 bg-white " action="">
+                <div class="card card-body border-1 border-dark">
+                  <textarea id="inp33" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10"
+                    readonly style="display: none;">
         ;; Function main (main)
 
 Merging blocks 13 and 14
@@ -645,101 +738,168 @@ main (int argc, char * * argv)
 }
 
       </textarea>
-    </div>
-</form>
+                </div>
+              </form>
 
 
-  <br>
-<button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtex3()" disabled><i class="bi bi-pencil-fill"></i> Show</button>
+              <br>
+              <button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtex3()" disabled> Show Control Flow Graph</button>
 
-</div> <!-- column ended for exercise 3-->
-</div> <!--row ended for exrcise 3-->
-</div> <!--card body ended for exrcise 3-->
-</div> <!--card ended for exrcise 3-->
+            </div> <!-- column ended for exercise 3-->
+          </div> <!--row ended for exrcise 3-->
+        </div> <!--card body ended for exrcise 3-->
+      </div> <!--card ended for exrcise 3-->
 
-<div id="dispuml3" class="card border border-2 border-primary" style="display:none;">
+      <div id="dispuml3" class="card border border-2 border-primary" style="display:none;">
+        <div class="card-body">
+          <!----------------------------------------------------------------------- Lable 4 ------------------------------------------------------------->
+
+          <label for="table34" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
+          </label>
+          <div id="cfg_diag_ex3">
+            <img src="./images/cfg3.png" alt="cfg3">
+          </div>
+        </div>
+      </div>
+
+      <div id="calcompl3" class="card " style="display:none;">
+        <div class="card-body purple-border rounded-1">
+          <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
+          <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic
+            complexity
+          </label>
+          <div class="input-group mb-3 ">
+            <span class="input-group-text" id="basic-addon1">No. of Nodes (N)</span>
+            <input type="number" class="form-control" id="c31" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">No. of Edges (E)</span>
+            <input type="number" class="form-control" id="c32" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+            <input type="number" class="form-control" id="c33" placeholder="E - N + 2" aria-describedby="basic-addon1">
+          </div>
+          <button id="calbtn3 " class="btn btn-success " type="button" onclick="calex3()"  disabled> Submit</button>
+        </div>
+      </div>
+      
+<!--p class="fw-bold fs-6" id="para1" style="display: none;">Click to View Solution</p-->
+<button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn" style="display: none;" onclick="viewsolutionb()" disabled>Click to View Solution</button><br>
+      <!------------------------------------------------------Exercise 3 end----------------------------------------------------------->
+      
+      <!--div class="modal" tabindex="-1">
+        <div class="modal-dialog  modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Nodes</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>No .of nodes is incorrect.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+              
+            </div>
+          </div>
+        </div>
+      </div-->
+      <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
+
+
+      <div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
   <div class="card-body">
-    <!----------------------------------------------------------------------- Lable 4 ------------------------------------------------------------->
-
-<label for="table34" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
-</label>
-<div id="cfg_diag_ex3">
-<img src="./images/cfg3.png" alt="cfg3">
-</div>
-</div></div>
-
-<div id="calcompl3" class="card " style="display:none;">
-  <div class="card-body purple-border rounded-1">
-    <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
-    <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic complexity
-    </label>
-    <div class="input-group mb-3 ">
-      <span class="input-group-text" id="basic-addon1" >No. of Nodes (N)</span>
-      <input type="number" class="form-control" id="c31"  aria-describedby="basic-addon1">
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">No. of Edges (E)</span>
-      <input type="number" class="form-control" id="c32"  aria-describedby="basic-addon1">
-    </div>
-
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
-      <input type="number" class="form-control" id="c33" placeholder="E - N + 2" aria-describedby="basic-addon1">
-    </div>
-    <button id="calbtn3" class="btn btn-success" type="button" onclick="calex3()" disabled>  Submit</button>
-    </div>
-    </div>
-   
-<!------------------------------------------------------Exercise 3 end----------------------------------------------------------->
-  <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
-
-
-				<!--div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
-  <div class="card-body">
-	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Result</label>
+	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Result and Discussion</label>
 
    <div style="font-size: medium;" id="show_result1"  style=" display: none;" >
-   <img class="img-fluid" src="./images/solution1.png" alt="solution 1">
+   <p class="fs-6">
+    To determine McCabe's cyclomatic complexity, we observe that <br>
+    <br>
+    E = # of edges = 7<br>
+    N = # of nodes = 7 (including the ENTRY and EXIT nodes)<br>
+    So, the cyclomatic complexity becomes:<br>
+    <br>
+    V(G) = E - N + 2<br>
+         = 7 - 7 + 2<br>
+         = 2
+    
+   </p>
  
 </div> 
 <div style="font-size: medium;" id="show_result2"  style=" display: none;" >
-  <img class="img-fluid" src="./images/solution2.png" alt="solution 2">
-
+ 
+  <ul>
+    <li class="fs-6">From the above CFG we find that:
+      <ul>
+        <li class="fs-6" style="list-style-type: none;">
+          N = # of nodes = 10<br>
+  E = # of edges = 11<br>
+  So, the cyclomatic complexity becomes<br>
+  <br>
+  V(G) = E - N + 2<br>
+       = 10 - 11 + 2<br>
+       = 3<br>
+        </li>
+      </ul>
+    </li>
+    <li class="fs-6">The linearly independent paths for the above shown CFG are:
+      <ul style="list-style-type:square;">
+        <li  class="fs-6"> 2 - 7 - 8 - 9</li>
+<li class="fs-6">  2 - 7 - 3 - 5 - 6 - 7 - 8 - 9</li>
+ <li class="fs-6"> 2 - 7 - 3 - 5 - 4 - 5 - 6 - 7 - 8 - 9</li>
+      </ul>
+    </li>
+  </ul>
+  
 </div> 
 <div style="font-size: medium;" id="show_result3"  style=" display: none;" >
-  <img class="img-fluid" src="./images/solution3.png" alt="solution 3">
+  
+<p class="fs-6">
+  From the above CFG we find that:
+N = # of nodes = 15<br>
+E = # of edges = 19<br>
+So, the cyclomatic complexity becomes<br>
+<br>
+V(G) = E - N + 2<br>
+     = 19 - 15 + 2<br>
+     = 6<br>
+Since V(G) is less than 10, the concerned program could be categorized as simple in terms of its complexity.
 
+</p>
 </div> 
 <br>
-<button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button>
+<!--button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button-->
 </div--> <!-- Card body ended for result display-->
-<!--/div--> <!-- Card  ended for result display-->
-		
-</div> <!--- d-Flex ended-->
+      <!--/div--> <!-- Card  ended for result display-->
+
+    </div> <!--- d-Flex ended-->
   </div> <!-- container-fluid ended-->
-  
+
   <div class="container-fluid p-1">
-  <hr>
-  <footer class="text-white text-center ">
-    <div class="text-center text-primary fs-5 "  >
-      Copyright © 2023  IIT Kharagpur,
-      <a class="text-primary fs-5" href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a>
-    </div>
-   
+    <hr>
+    <footer class="text-white text-center ">
+      <div class="text-center text-primary fs-5 ">
+        Copyright © 2023 IIT Kharagpur,
+        <a class="text-primary fs-5" href="http://vlabs.iitkgp.ac.in/">Virtual Lab</a>
+      </div>
+
     </footer>
-  
+
     <hr>
   </div>
-   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/exercise1.js"></script>
-    <script src="./js/exercise2.js"></script>
-    <script src="./js/exercise3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.5/joint.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/exercise1.js"></script>
+  <script src="./js/exercise2.js"></script>
+  <script src="./js/exercise3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.6.5/joint.js"></script>
 </body>
+
 </html>

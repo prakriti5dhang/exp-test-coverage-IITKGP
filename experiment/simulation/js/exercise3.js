@@ -11,6 +11,36 @@ function addbtnt31(){
   
   }
   
+  /***************************************************** Function to Calulate Cyclomatic Complexity   ***************************************************/
+  function calex3(){
+    var inpt31= document.getElementById("c31").value;
+    var inpt32= document.getElementById("c32").value;
+    var inpt33= document.getElementById("c33").value;
+
+    if((inpt31== 15)&&(inpt32== 19)&&(inpt33== 6)){
+
+         alert("All are correct!");
+         document.getElementById("c31").value="";
+         document.getElementById("c32").value="";
+         document.getElementById("c33").value="";
+    }
+
+    else if((inpt31 != 15)){
+       alert("Incorrect. Check no of nodes");
+    }
+
+    else if((inpt32 != 19)){
+        alert("Incorrect. Check no of edges");
+     }
+
+     else if((inpt33 != 6)){
+        alert("Incorrect. Check Cyclomatic Complexity");
+     }
+
+    else{
+        alert("Try Again")
+    }
+}
 
 /********************************************* Function to show CFG ***********************************************/
 
