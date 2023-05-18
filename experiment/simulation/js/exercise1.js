@@ -5,6 +5,11 @@ File Name: exercise1.js
 Author: Prakriti Dhang*/
 
 
+function addbtnt1(){
+    document.getElementById("inp3").style.display="block";
+    document.getElementById("drawbtn").disabled=false;
+
+}
 
 /********************************************* Function to show CFG ****************************************/
 
@@ -12,12 +17,13 @@ Author: Prakriti Dhang*/
 function drawbtex1(){
 
     document.getElementById("dispuml1").style.display="block";
-    var namespace = joint.shapes;
+    document.getElementById("calbtn").disabled=false;
+   /* var namespace = joint.shapes;
   
     var graph = new joint.dia.Graph({}, { cellNamespace: namespace });
   
     paper = new joint.dia.Paper({
-        el: document.getElementById('stchart_diag_ex1'),
+        el: document.getElementById('cfg_diag_ex1'),
         model: graph,
         //x: 0,
         //y: 0,
@@ -31,34 +37,14 @@ function drawbtex1(){
         cellViewNamespace: namespace
     });
   
-    var initialst = new joint.shapes.standard.Image();
-    initialst.resize(25, 25);
-    initialst.position(29,107);
-    //actor1.position(103, 15);
-    initialst.attr('root/title', 'joint.shapes.standard.BoarderedImage');
-    initialst.attr('label/fontSize', 16);
-    initialst.attr('body/strokeWidth', 2);
-    initialst.attr('border/rx', 2);
-    initialst.attr('image/xlinkHref', 'images/initial_state.png');
-    initialst.addTo(graph);
-  
-    var finalst = new joint.shapes.standard.Image();
-    finalst.resize(25, 25);
-    finalst.position(445,393);
-    //actor1.position(103, 15);
-    finalst.attr('root/title', 'joint.shapes.standard.BoarderedImage');
-    finalst.attr('label/fontSize', 16);
-    finalst.attr('body/strokeWidth', 2);
-    finalst.attr('border/rx', 2);
-    finalst.attr('image/xlinkHref', 'images/endstate.png');
-    finalst.addTo(graph);
+   
   
   
-    var state1 = new joint.shapes.standard.Rectangle();
+    var cfg1 = new joint.shapes.standard.Rectangle();
           
-    state1.position(166, 99);
-    state1.resize(100, 40);
-    state1.attr({
+    cfg1.position(51, 7);
+    cfg1.resize(100, 40);
+    cfg1.attr({
         body: {
             rx: 3, // add a corner radius
             ry: 3,
@@ -66,19 +52,19 @@ function drawbtex1(){
             strokeWidth: 2
         },
         label: {
-            text: arrstate[0],
-            //text:arractivity[0],
+            text: "ENTRY",
+            
             fill: 'black',
             fontSize: 16
         }
     });
-    state1.addTo(graph);
+    cfg1.addTo(graph);
   
-    var evnt1 = new joint.shapes.standard.Rectangle();
-          
-    evnt1.position(166, 136);
-    evnt1.resize(100, 40);
-    evnt1.attr({
+    var cfg2 = new joint.shapes.standard.Rectangle();
+    cfg2.position(48, 132);      
+    
+    cfg2.resize(100, 40);
+    cfg2.attr({
         body: {
             rx: 3, // add a corner radius
             ry: 3,
@@ -87,19 +73,19 @@ function drawbtex1(){
         },
         label: {
             //text: arrstate[0],
-            text:arractivity[0],
+            text:"#2",
             fill: 'black',
             fontSize: 16
         }
     });
-    evnt1.addTo(graph);
+    cfg2.addTo(graph);
   
   
-    var state2 = new joint.shapes.standard.Rectangle();
+    var cfg3 = new joint.shapes.standard.Rectangle();
           
-    state2.position(463, 159);
-    state2.resize(100, 40);
-    state2.attr({
+    cfg3.position(246, 132);
+    cfg3.resize(100, 40);
+    cfg3.attr({
         body: {
             rx: 3, // add a corner radius
             ry: 3,
@@ -107,18 +93,18 @@ function drawbtex1(){
             strokeWidth: 2
         },
         label: {
-            text: arrstate[1],
+            text: "#3",
             fill: 'black',
             fontSize: 16
         }
     });
-    state2.addTo(graph);
+    cfg3.addTo(graph);
   
-    var evnt2 = new joint.shapes.standard.Rectangle();
+    var cfg4 = new joint.shapes.standard.Rectangle();
           
-    evnt2.position(463, 196);
-    evnt2.resize(100, 40);
-    evnt2.attr({
+    cfg4.position(161, 241);
+    cfg4.resize(100, 40);
+    cfg4.attr({
         body: {
             rx: 3, // add a corner radius
             ry: 3,
@@ -126,18 +112,18 @@ function drawbtex1(){
             strokeWidth: 2
         },
         label: {
-            text: arractivity[1],
+            text: "#4",
             fill: 'black',
             fontSize: 16
         }
     });
-    evnt2.addTo(graph);
+    cfg4.addTo(graph);
   
-    var state3 = new joint.shapes.standard.Rectangle();
+    var cfg5 = new joint.shapes.standard.Rectangle();
           
-    state3.position(164, 386);
-    state3.resize(100, 40);
-    state3.attr({
+    cfg5.position(161, 355);
+    cfg5.resize(100, 40);
+    cfg5.attr({
         body: {
             rx: 3, // add a corner radius
             ry: 3,
@@ -145,18 +131,18 @@ function drawbtex1(){
             strokeWidth: 2
         },
         label: {
-            text: arrstate[2],
+            text: "#5",
             fill: 'black',
             fontSize: 16
         }
     });
-    state3.addTo(graph);
+    cfg5.addTo(graph);
   
-    var evnt3 = new joint.shapes.standard.Rectangle();
+    var cfg6 = new joint.shapes.standard.Rectangle();
           
-    evnt3.position(164, 422);
-    evnt3.resize(100, 40);
-    evnt3.attr({
+    cfg6.position(161, 449);
+    cfg6.resize(100, 40);
+    cfg6.attr({
         body: {
             rx: 3, // add a corner radius
             ry: 3,
@@ -164,126 +150,86 @@ function drawbtex1(){
             strokeWidth: 2
         },
         label: {
-            text: arractivity[2],
+            text: "#6",
             fill: 'black',
             fontSize: 16
         }
     });
-    evnt3.addTo(graph);
-  
-    joint.shapes.standard.Link.define('examples.CustomLink', {
-      attrs: {
-          line: {
-              stroke: 'black',
-              strokeWidth: 2,
-              targetMarker: {
-                  'type': 'rect',
-                  
-              }
-          }
-      },
-      
+    cfg6.addTo(graph);
+
+    var cfg7 = new joint.shapes.standard.Rectangle();
+          
+    cfg7.position(161, 542);
+    cfg7.resize(100, 40);
+    cfg7.attr({
+        body: {
+            rx: 3, // add a corner radius
+            ry: 3,
+            fill: '#FFFC8C',
+            strokeWidth: 2
+        },
+        label: {
+            text: "EXIT",
+            fill: 'black',
+            fontSize: 16
+        }
     });
+    cfg7.addTo(graph);
   
+    
   
   var linkis1 = new joint.shapes.standard.Link();
-  linkis1.source(initialst);
-  linkis1.target(state1);
+  linkis1.source(cfg1);
+  linkis1.target(cfg2);
   linkis1.addTo(graph);
-  linkis1.appendLabel({
-            attrs: {
-                text: {
-                    text: arrevent[0],
-                    fontSize: 16
-                }
-                
-          }
-        });
-        linkis1.addTo(graph);
+  
+     
   
         
   
   var link1 = new joint.shapes.standard.Link();
-  link1.source(state1);
-  link1.target(state2);
+  link1.source(cfg1);
+  link1.target(cfg3);
   link1.addTo(graph);
-          link1.appendLabel({
-            attrs: {
-                text: {
-                    text: arrevent[1],
-                    fontSize: 16
-                }
-                
-          },
-          position: {
-            distance: 0.25
-        }
-        });
-        link1.addTo(graph);
+         
+       
   
   var link2 = new joint.shapes.standard.Link();
-  link2.position(164, 386);
-  link2.source(evnt2);
-  link2.target(evnt1);
+ 
+  link2.source(cfg2);
+  link2.target(cfg4);
   link2.addTo(graph);
-          link2.appendLabel({
-            attrs: {
-                text: {
-                    text: arrevent[2],
-                    fontSize: 16
-                }
-                
-          }
-        });
-        link2.addTo(graph);
+     
   
         var link3 = new joint.shapes.standard.Link();
-        link3.source(evnt1);
-        link3.target(state3);
+        link3.source(cfg3);
+        link3.target(cfg4);
         link3.addTo(graph);
-                link3.appendLabel({
-                  attrs: {
-                      text: {
-                          text: arrevent[3],
-                          fontSize: 16
-                      }
-                      
-                }
-              });
-              link3.addTo(graph);
+               
+        var link3a = new joint.shapes.standard.Link();
+        link3a.source(cfg4);
+        link3a.target(cfg3);
+        link3a.addTo(graph);    
   
   
               var link4 = new joint.shapes.standard.Link();
-              link4.source(evnt2);
-              link4.target(state3);
+              link4.source(cfg4);
+              link4.target(cfg5);
               link4.addTo(graph);
-                      link4.appendLabel({
-                        attrs: {
-                            text: {
-                                text: arrevent[4],
-                                fontSize: 16
-                            }
-                            
-                      }
-                    });
-                    link4.addTo(graph);
+                     
+                   
   
   
         var linkfs3 = new joint.shapes.standard.Link();
-        linkfs3.source(state3);
-        linkfs3.target(finalst);
-        linkfs3.addTo(graph);
-        linkfs3.appendLabel({
-            attrs: {
-                text: {
-                    text: arrevent[5],
-                    fontSize: 16
-                }
-                
-          }
-         
-        });
-        linkfs3.addTo(graph);
+        linkfs3.source(cfg5);
+        linkfs3.target(cfg6);
+        linkfs3.addTo(graph); 
+        
+
+        var linkfs4 = new joint.shapes.standard.Link();
+        linkfs4.source(cfg6);
+        linkfs4.target(cfg7); 
+        linkfs4.addTo(graph);*/
   
   }
   

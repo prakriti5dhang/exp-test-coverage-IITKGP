@@ -63,8 +63,8 @@ Author: Prakriti Dhang
   
 </select>
 <br>
-<p class="fw-bold fs-6" id="para1" style="display: none;">Click Submit to View Solution</p>
-<button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn" onclick="viewsolutionb()" disabled>Submit</button>
+<!--p class="fw-bold fs-6" id="para1" style="display: none;">Click Submit to View Solution</p>
+<button type="button" class="btn btn-info border border-2 border-primary fw-bold" id="dispviewbtn" onclick="viewsolutionb()" disabled>Submit</button-->
 
   </div> <!-- card body ended for select exercise div-->
 </div> <!-- card ended for select exercise div-->
@@ -117,7 +117,7 @@ Author: Prakriti Dhang
     <li>Draw a CFG using the basic blocks</li>
     <li>Determination of McCabe's complexity from a CFG</li>
   </ul>
-  <p class="fs-6" style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function. 
+  <p class="fs-6" style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function for the above code. 
     In other words, this would not work with user-defined functions. However, in real life a program would contain 
     several modules. All such modules have to be taken into account while determining the complexity.</p>
 </div> <!-- card body ended for exercise 1 problem statment-->
@@ -139,7 +139,7 @@ Author: Prakriti Dhang
       <label for="table1" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
       <form id="ftbl1"  class="p-1 bg-white " action="">
         <div class="card card-body border-1 border-dark">
-          <div class="form-group purple-border">
+          <div class="form-group green-border">
           <textarea id="inp1" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
         </div></div>
         <br>
@@ -159,7 +159,41 @@ Author: Prakriti Dhang
 <label for="table3" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
   <form id="ftbl3"  class="p-1 bg-white " action="">
     <div class="card card-body border-1 border-dark">
-      <textarea id="inp3" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly></textarea>
+      <textarea id="inp3" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly style="display: none;">
+        ;; Function main (main)
+
+        Merging blocks 5 and 6
+        main (int argc, char * * argv)
+        {
+          int n;
+          int sum;
+          int i;
+          int D.2055;
+          const char * restrict D.2054;
+        
+        <bb 2>:
+          n = 10;
+          sum = 0;
+          i = 1;
+          goto <bb 4>;
+        
+        <bb 3>:
+          sum = sum + i;
+          i = i + 1;
+        
+        <bb 4>:
+          if (i <= n)
+            goto <bb 3>;
+          else
+            goto <bb 5>;
+        
+        <bb 5>:
+          D.2054 = (const char * restrict) "Sum of first %d natural numbers is: %d\n";
+          printf (D.2054, n, sum);
+          D.2055 = 0;
+          return D.2055;
+        
+        }</textarea>
     </div>
 </form>
 
@@ -169,7 +203,7 @@ Author: Prakriti Dhang
   
 
 <br>
-<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()" > <i class="bi bi-pencil-fill"></i> Show</button>
+<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex1()" disabled> <i class="bi bi-pencil-fill"></i> Show</button>
 
 </div> <!-- column ended for exercise 1-->
 </div> <!--row ended for exrcise 1-->
@@ -182,11 +216,32 @@ Author: Prakriti Dhang
     <label for="table4" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
     </label>
 <div id="cfg_diag_ex1">
+<img src="./images/cfg1.png" alt="cfg1">
+</div>
+</div>
+</div>
+<div id="calcompl1" class="card " style="display:none;">
+  <div class="card-body purple-border rounded-1">
+    <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
+    <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic complexity
+    </label>
+    <div class="input-group mb-3 ">
+      <span class="input-group-text" id="basic-addon1" >No. of Nodes (N)</span>
+      <input type="number" class="form-control" id="c1"  aria-describedby="basic-addon1">
+    </div>
+    
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">No. of Edges (E) </span>
+      <input type="number" class="form-control" id="c2"  aria-describedby="basic-addon1">
+    </div>
 
-</div>
-</div>
-</div>
-
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+      <input type="number" class="form-control" id="c3" placeholder="E - N + 2"  aria-describedby="basic-addon1">
+    </div>
+    <button id="calbtn" class="btn btn-success" type="button" onclick="calex1()" disabled>  Submit</button>
+    </div>
+    </div>
     
 <!--------------------------------------------------- Exercise 1 complete--------------------------------------------------------->
 
@@ -235,7 +290,7 @@ Author: Prakriti Dhang
    
    <ul>
     <li> Identify the linearly independent paths from a CFG</li></ul>
-    <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function. In other words, this would not work with user-defined functions. However, in real life a program would contain several modules. All such modules have to be taken into account while determining the complexity.
+    <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for the main function for the above code. In other words, this would not work with user-defined functions. However, in real life a program would contain several modules. All such modules have to be taken into account while determining the complexity.
 
 </p>
 </div> <!-- card body ended for exercise 1 problem statment-->
@@ -257,7 +312,7 @@ Author: Prakriti Dhang
       <label for="table21" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
       <form id="ftbl21"  class="p-1 bg-white " action="">
         <div class="card card-body border-1 border-dark">
-          <div class="form-group purple-border">
+          <div class="form-group green-border">
           <textarea id="inp21" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
         </div></div>   <br>
         <button id="t21addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt21()" >Compile Program</button>
@@ -276,13 +331,65 @@ Author: Prakriti Dhang
 <label for="table23" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
   <form id="ftbl23"  class="p-1 bg-white " action="">
     <div class="card card-body border-1 border-dark">
-      <textarea id="inp23" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly></textarea>
+      <textarea id="inp23" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly style="display: none;">
+        ;; Function main (main)
+
+Merging blocks 8 and 9
+main (int argc, char * * argv)
+{
+  int nc;
+  int nr;
+  int j;
+  int i;
+  int a[5][10];
+  int D.2061;
+  int j.1;
+  int i.0;
+
+<bb 2>:
+  nr = 5;
+  nc = 10;
+  i = 0;
+  goto <bb 7>;
+
+<bb 3>:
+  j = 0;
+  goto <bb 5>;
+
+<bb 4>:
+  i.0 = i;
+  j.1 = j;
+  a[i.0][j.1] = 0;
+  j = j + 1;
+
+<bb 5>:
+  if (j <= nc)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  i = i + 1;
+
+<bb 7>:
+  if (i <= nr)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  D.2061 = 0;
+  return D.2061;
+
+}
+
+      </textarea>
     </div>
 </form>
 
 
   <br>
-<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex2()" ><i class="bi bi-pencil-fill"></i> Show</button>
+<button id="drawbtn2" class="btn btn-primary" type="button" onclick="drawbtex2()" disabled><i class="bi bi-pencil-fill"></i> Show</button>
 
 </div> <!-- column ended for exercise 2-->
 </div> <!--row ended for exrcise 2-->
@@ -296,9 +403,32 @@ Author: Prakriti Dhang
 <label for="table24" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
 </label>
 <div id="cfg_diag_ex2">
-
+<img src="./images/cfg2.png" alt="cfg2">
 </div>
 </div></div>
+
+<div id="calcompl2" class="card " style="display:none;">
+  <div class="card-body purple-border rounded-1">
+    <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
+    <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic complexity
+    </label>
+    <div class="input-group mb-3 ">
+      <span class="input-group-text" id="basic-addon1" >No. of Nodes (N)</span>
+      <input type="number" class="form-control" id="c21"  aria-describedby="basic-addon1">
+    </div>
+    
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">No. of Edges (E)</span>
+      <input type="number" class="form-control" id="c22"  aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+      <input type="number" class="form-control" id="c23" placeholder="E - N + 2" aria-describedby="basic-addon1">
+    </div>
+    <button id="calbtn2" class="btn btn-success" type="button" onclick="calex2()" disabled>  Submit</button>
+    </div>
+    </div>
    
 <!------------------------------------------------------Exercise 2 end----------------------------------------------------------->
 <!----------------------------------------Problem Statement Exercise 3-------------------------------------->
@@ -366,7 +496,7 @@ Author: Prakriti Dhang
     How would you classify this program in terms of its complexity (simple, complex, unstable)?</p>
 
     <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only for 
-      the main function. In other words, this would not work with user-defined functions. However, in real life a program
+      the main function for the above code. In other words, this would not work with user-defined functions. However, in real life a program
        would contain several modules. All such modules have to be taken into account while determining the complexity.
 
 </p>
@@ -381,7 +511,7 @@ Author: Prakriti Dhang
 <!------------------------------------------Exercise 3 -------------------------------------------->
 
 <div class="card border border-2 border-success p-2" id="ex3" style="display:none;">
-  <div class="card-body">
+  <div class="card-body ">
     <div class="row">
     <div class="col-md-12" >
 
@@ -389,7 +519,7 @@ Author: Prakriti Dhang
       <label for="table31" class="form-label fs-6" style=" font-weight: bold;">Write the C program below</label>
       <form id="ftbl31"  class="p-1 bg-white " action="">
         <div class="card card-body border-1 border-dark">
-          <div class="form-group purple-border">
+          <div class="form-group green-border">
           <textarea id="inp31" class="form-control rounded-0 " id="exampleFormControlTextarea1" placeholder="Write the above code here..." rows="10"></textarea>
         </div></div>   <br>
         <button id="t31addbtn" class="btn btn-warning border border-1 border-dark" type="button" onclick="addbtnt31()" >Compile Program</button>
@@ -408,13 +538,119 @@ Author: Prakriti Dhang
 <label for="table33" class="form-label fs-6" style=" font-weight: bold;">Program representation in terms of Basic Blocks</label>
   <form id="ftbl33"  class="p-1 bg-white " action="">
     <div class="card card-body border-1 border-dark">
-      <textarea id="inp33" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly></textarea>
+      <textarea id="inp33" class="form-control rounded-0 " id="exampleFormControlTextarea1" rows="10" readonly style="display: none;">
+        ;; Function main (main)
+
+Merging blocks 13 and 14
+main (int argc, char * * argv)
+{
+  int flag;
+  int middle;
+  int high;
+  int low;
+  int n;
+  int key;
+  int a[8];
+  int D.2079;
+  const char * restrict D.2078;
+  int D.2070;
+  int middle.2;
+  const char * restrict D.2067;
+  int D.2064;
+  int middle.1;
+  int D.2062;
+  int key.0;
+  char * D.2060;
+  char * * D.2059;
+
+<bb 2>:
+  a[0] = 2;
+  a[1] = 4;
+  a[2] = 6;
+  a[3] = 8;
+  a[4] = 10;
+  a[5] = 12;
+  a[6] = 14;
+  a[7] = 16;
+  D.2059 = argv + 8;
+  D.2060 = *D.2059;
+  key.0 = atoi (D.2060);
+  key = key.0;
+  n = 8;
+  low = 0;
+  high = n + -1;
+  flag = 0;
+  goto <bb 10>;
+
+<bb 3>:
+  D.2062 = low + high;
+  middle = D.2062 / 2;
+  middle.1 = middle;
+  D.2064 = a[middle.1];
+  if (D.2064 == key)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+<bb 4>:
+  D.2067 = (const char * restrict) "Found key %d at position %d\n";
+  printf (D.2067, key, middle);
+  flag = 1;
+  goto <bb 8>;
+
+<bb 5>:
+  middle.2 = middle;
+  D.2070 = a[middle.2];
+  if (D.2070 > key)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+<bb 6>:
+  high = middle + -1;
+  goto <bb 8>;
+
+<bb 7>:
+  low = middle + 1;
+
+<bb 8>:
+  if (flag != 0)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+<bb 9>:
+  goto <bb 11>;
+
+<bb 10>:
+  if (low <= high)
+    goto <bb 3>;
+  else
+    goto <bb 11>;
+
+<bb 11>:
+  if (flag == 0)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+<bb 12>:
+  D.2078 = (const char * restrict) "Key %d was not found!\n";
+  printf (D.2078, key);
+
+<bb 13>:
+  D.2079 = 0;
+  return D.2079;
+
+}
+
+      </textarea>
     </div>
 </form>
 
 
   <br>
-<button id="drawbtn" class="btn btn-primary" type="button" onclick="drawbtex3()" ><i class="bi bi-pencil-fill"></i> Show</button>
+<button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtex3()" disabled><i class="bi bi-pencil-fill"></i> Show</button>
 
 </div> <!-- column ended for exercise 3-->
 </div> <!--row ended for exrcise 3-->
@@ -428,15 +664,38 @@ Author: Prakriti Dhang
 <label for="table34" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
 </label>
 <div id="cfg_diag_ex3">
-
+<img src="./images/cfg3.png" alt="cfg3">
 </div>
 </div></div>
+
+<div id="calcompl3" class="card " style="display:none;">
+  <div class="card-body purple-border rounded-1">
+    <!-------------------------------------------------------------- Lable 5---------------------------------------------------------------------->
+    <label for="table5" class="form-label fs-6" style=" font-weight: bold;">Determination of McCabe's cyclomatic complexity
+    </label>
+    <div class="input-group mb-3 ">
+      <span class="input-group-text" id="basic-addon1" >No. of Nodes (N)</span>
+      <input type="number" class="form-control" id="c31"  aria-describedby="basic-addon1">
+    </div>
+    
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">No. of Edges (E)</span>
+      <input type="number" class="form-control" id="c32"  aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+      <input type="number" class="form-control" id="c33" placeholder="E - N + 2" aria-describedby="basic-addon1">
+    </div>
+    <button id="calbtn3" class="btn btn-success" type="button" onclick="calex3()" disabled>  Submit</button>
+    </div>
+    </div>
    
 <!------------------------------------------------------Exercise 3 end----------------------------------------------------------->
   <!-------------------------------------------------------------Result Display----------------------------------------------------------------->
 
 
-				<div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
+				<!--div class="card border border-2 border-warning p-2" id="dispres" style="display:none;">
   <div class="card-body">
 	<label for="result" class="form-label fs-4" style="color: brown; font-weight: bold;">Result</label>
 
@@ -454,8 +713,8 @@ Author: Prakriti Dhang
 </div> 
 <br>
 <button type="button" class="btn btn-info border-primary" id="viewsol" onclick="solview()" disabled>View Solution</button>
-</div> <!-- Card body ended for result display-->
-</div> <!-- Card  ended for result display-->
+</div--> <!-- Card body ended for result display-->
+<!--/div--> <!-- Card  ended for result display-->
 		
 </div> <!--- d-Flex ended-->
   </div> <!-- container-fluid ended-->

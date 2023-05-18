@@ -270,12 +270,17 @@ div.divscroll {
     opacity: 1;
   }
 
-  .purple-border textarea {
-    border: 1px solid #ba68c8;
+  .green-border textarea {
+    border: 1px solid #21a700;
 }
-.purple-border .form-control:focus {
-    border: 1px solid #ba68c8;
-    box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+.green-border .form-control:focus {
+    border: 1px solid #21a700;
+    box-shadow: 0 0 0 0.2rem rgba(0, 68, 0, 0.377);
+}
+
+.purple-border  {
+  border: 2px solid #e013f3;
+  
 }
 .dgreyc{
   color: #4d4343;

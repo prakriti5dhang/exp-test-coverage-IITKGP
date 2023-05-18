@@ -13,15 +13,15 @@ function subex(){
     document.getElementById("ex1").style.display="none";
     document.getElementById("exercise3").style.display="none";
     document.getElementById("ex3").style.display="none";
-    document.getElementById("para1").style.display="none";
-    document.getElementById("dispres").style.display="none";
+    //document.getElementById("para1").style.display="none";
+    //document.getElementById("dispres").style.display="none";
     document.getElementById("show_result1").style.display="none";
     document.getElementById("show_result2").style.display="none";
     document.getElementById("dispuml1").style.display="none";
     document.getElementById("dispuml2").style.display="none";
     document.getElementById("dispuml3").style.display="none";
-    document.getElementById("dispviewbtn").disabled=true;
-    document.getElementById("viewsol").disabled=true;
+    //document.getElementById("dispviewbtn").disabled=true;
+    //document.getElementById("viewsol").disabled=true;
     
 }
     if(ex.options[ex.selectedIndex].value==1){
@@ -31,14 +31,18 @@ function subex(){
        document.getElementById("ex2").style.display="none";
        document.getElementById("exercise3").style.display="none";
     document.getElementById("ex3").style.display="none";
-        document.getElementById("para1").style.display="block";
-        document.getElementById("dispres").style.display="none";
-        document.getElementById("show_result1").style.display="none";
-        document.getElementById("show_result2").style.display="none";
+       // document.getElementById("para1").style.display="block";
+       // document.getElementById("dispres").style.display="none";
+        //document.getElementById("show_result1").style.display="none";
+        //document.getElementById("show_result2").style.display="none";
         document.getElementById("dispuml3").style.display="none";
         document.getElementById("dispuml2").style.display="none";
-        document.getElementById("dispviewbtn").disabled=false;
-        document.getElementById("viewsol").disabled=true;
+        document.getElementById("calcompl1").style.display="block";
+        document.getElementById("calcompl2").style.display="none";
+        document.getElementById("calcompl3").style.display="none";
+
+       // document.getElementById("dispviewbtn").disabled=false;
+       // document.getElementById("viewsol").disabled=true;
        
     }
     if(ex.options[ex.selectedIndex].value==2){
@@ -48,14 +52,17 @@ function subex(){
       document.getElementById("ex1").style.display="none";
       document.getElementById("exercise3").style.display="none";
     document.getElementById("ex3").style.display="none";
-      document.getElementById("para1").style.display="block";
-      document.getElementById("dispres").style.display="none";
-      document.getElementById("show_result1").style.display="none";
-      document.getElementById("show_result2").style.display="none";
+      //document.getElementById("para1").style.display="block";
+     // document.getElementById("dispres").style.display="none";
+      //document.getElementById("show_result1").style.display="none";
+      //document.getElementById("show_result2").style.display="none";
       document.getElementById("dispuml1").style.display="none";
       document.getElementById("dispuml3").style.display="none";
-      document.getElementById("dispviewbtn").disabled=false;
-      document.getElementById("viewsol").disabled=true;
+      document.getElementById("calcompl2").style.display="block";
+      document.getElementById("calcompl1").style.display="none";
+    document.getElementById("calcompl3").style.display="none";
+    //  document.getElementById("dispviewbtn").disabled=false;
+     // document.getElementById("viewsol").disabled=true;
      
   }
   if(ex.options[ex.selectedIndex].value==3){
@@ -65,15 +72,18 @@ function subex(){
     document.getElementById("ex2").style.display="none";
     document.getElementById("exercise1").style.display="none";
     document.getElementById("ex1").style.display="none";
-    document.getElementById("para1").style.display="block";
-    document.getElementById("dispres").style.display="none";
-    document.getElementById("show_result1").style.display="none";
-    document.getElementById("show_result2").style.display="none";
+    //document.getElementById("para1").style.display="block";
+   // document.getElementById("dispres").style.display="none";
+    //document.getElementById("show_result1").style.display="none";
+    //document.getElementById("show_result2").style.display="none";
     document.getElementById("dispuml1").style.display="none";
     document.getElementById("dispuml2").style.display="none";
+    document.getElementById("calcompl1").style.display="none";
+    document.getElementById("calcompl2").style.display="none";
+    document.getElementById("calcompl3").style.display="block";
     
-    document.getElementById("dispviewbtn").disabled=false;
-    document.getElementById("viewsol").disabled=true;
+   // document.getElementById("dispviewbtn").disabled=false;
+   // document.getElementById("viewsol").disabled=true;
    
 }
     
@@ -81,7 +91,7 @@ function subex(){
 }
 /* Submit button to directly view the solution*/
 
-function viewsolutionb(){ //submit button
+/*function viewsolutionb(){ //submit button
   document.getElementById("dispres").style.display="block";
   document.getElementById("show_result1").style.display="none";
   document.getElementById("show_result2").style.display="none";
@@ -122,5 +132,5 @@ function solview(){  //view solution button
         
       }
 
-}
+}*/
  
