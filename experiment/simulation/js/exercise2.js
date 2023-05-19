@@ -17,25 +17,41 @@ function calex2() {
   var inpt22 = document.getElementById("c22").value;
   var inpt23 = document.getElementById("c23").value;
 
-  if ((inpt21 == 10) && (inpt22 == 11) && (inpt23 == 3)) {
+  if ((inpt21 == "")){
+    alert("No of nodes cannot be blank");
+}
+else if ((inpt22 == "")){
+    alert("No of edges cannot be blank");
+}
+else  if ((inpt23 == "")){
+    alert("Cyclomatic Complexity cannot be blank");
+}
+
+else if ((inpt21 == 10) && (inpt22 == 11) && (inpt23 == 3)) {
 
     alert("All are correct!");
-    document.getElementById("c21").value = "";
-    document.getElementById("c22").value = "";
-    document.getElementById("c23").value = "";
+    document.getElementById("c21").style.backgroundColor="#BEFF99  ";
+    document.getElementById("c22").style.backgroundColor="#BEFF99  ";
+    document.getElementById("c23").style.backgroundColor="#BEFF99  ";
+    //document.getElementById("c21").value = "";
+    //document.getElementById("c22").value = "";
+    //document.getElementById("c23").value = "";
 
   }
 
   else if ((inpt21 != 10)) {
     alert("Incorrect. Check no of nodes");
+    document.getElementById("c21").style.backgroundColor="#FFAB99 ";
   }
 
   else if ((inpt22 != 11)) {
     alert("Incorrect. Check no of edges");
+    document.getElementById("c22").style.backgroundColor="#FFAB99 ";
   }
 
   else if ((inpt23 != 3)) {
     alert("Incorrect. Check Cyclomatic Complexity");
+    document.getElementById("c23").style.backgroundColor="#FFAB99 ";
   }
 
   else {

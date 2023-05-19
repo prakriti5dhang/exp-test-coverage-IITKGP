@@ -196,7 +196,14 @@ input::-webkit-inner-spin-button {
   border-right: 1px solid #1addff;
 }
 
+span.mySpanClass {
+  background-color: #e7cdff;
+}
+/*#8af1ff;*/
 
+span.mySpanClass1 {
+  background-color: #fff6cd;
+}
 
 div.divscroll {
    

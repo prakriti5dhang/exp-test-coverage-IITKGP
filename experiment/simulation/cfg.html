@@ -122,7 +122,7 @@ Author: Prakriti Dhang
           <ul class="fs-6">
             <li>Identify the basic basic blocks for a given program</li>
             <li>Draw a CFG using the basic blocks</li>
-            <li>Determination of McCabe's complexity from a CFG</li>
+            <li>Determination of McCabe's complexity from a CFG. (McCabe's Cyclomatic complexity can be obtained by: E - N + 2)</li>
           </ul>
           <p class="fs-6" style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only
             for the main function for the above code.
@@ -229,7 +229,7 @@ Author: Prakriti Dhang
           <label for="table4" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
           </label>
           <div id="cfg_diag_ex1">
-            <img src="./images/cfg1.png" alt="cfg1">
+            <img src="./images/cfg_1.png" class="img-fluid" alt="cfg1">
           </div>
         </div>
       </div>
@@ -240,21 +240,21 @@ Author: Prakriti Dhang
             Complexity
           </label>
           <div class="input-group mb-3 ">
-            <span class="input-group-text" id="basic-addon1">No. of Nodes (N)</span>
-            <input type="number" class="form-control" id="c1" aria-describedby="basic-addon1">
+            <span class="input-group-text mySpanClass fs-5" id="basic-addon1">No. of Nodes (N)</span>
+            <input type="number" class="form-control fs-5" id="c1" placeholder="Enter no. of nodes" aria-describedby="basic-addon1">
           </div>
 
           <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">No. of Edges (E) </span>
-            <input type="number" class="form-control" id="c2" aria-describedby="basic-addon1">
+            <span class="input-group-text mySpanClass fs-5" id="basic-addon1">No. of Edges (E) </span>
+            <input type="number" class="form-control fs-5" id="c2" placeholder="Enter no. of edges" aria-describedby="basic-addon1">
           </div>
 
           <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
-            <input type="number" class="form-control" id="c3" placeholder="E - N + 2" aria-describedby="basic-addon1">
+            <span class="input-group-text mySpanClass fs-5" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+            <input type="number" class="form-control fs-5" id="c3" placeholder="E - N + 2" aria-describedby="basic-addon1">
           </div>
           <button id="calbtn" class="btn btn-success border border-dark" type="button" onclick="calex1()" disabled>
-            Submit</button>
+            Check</button>
         </div>
       </div>
 
@@ -308,7 +308,10 @@ Author: Prakriti Dhang
           <p class="fs-6 fw-bold">Learning Objectives:</p>
 
           <ul>
-            <li> Identify the linearly independent paths from a CFG</li>
+            <li>Identify the basic basic blocks for a given program</li>
+            <li>Draw a CFG using the basic blocks</li>
+            <li>Determination of McCabe's complexity from a CFG (McCabe's Cyclomatic complexity can be obtained by: E - N + 2)</li>
+            <li>Identify the linearly independent paths from a CFG</li>
           </ul>
           <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only
             for the main function for the above code. In other words, this would not work with user-defined functions.
@@ -415,7 +418,7 @@ main (int argc, char * * argv)
 
 
               <br>
-              <button id="drawbtn2" class="btn btn-primary border-dark" type="button" onclick="drawbtex2()" disabled>
+              <button id="drawbtn2" class="btn btn-primary border border-1 border-dark" type="button" onclick="drawbtex2()" disabled>
                 Show Control Flow Graph</button>
 
             </div> <!-- column ended for exercise 2-->
@@ -430,7 +433,7 @@ main (int argc, char * * argv)
           <label for="table24" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
           </label>
           <div id="cfg_diag_ex2">
-            <img src="./images/cfg2.png" alt="cfg2">
+            <img src="./images/cfg_2.png" class="img-fluid" alt="cfg2">
           </div>
         </div>
       </div>
@@ -442,21 +445,21 @@ main (int argc, char * * argv)
             complexity
           </label>
           <div class="input-group mb-3 ">
-            <span class="input-group-text fs-5" id="basic-addon1">No. of Nodes (N)</span>
-            <input type="number" class="form-control" id="c21" aria-describedby="basic-addon1">
+            <span class="input-group-text fs-5 mySpanClass" id="basic-addon1">No. of Nodes (N)</span>
+            <input type="number" class="form-control fs-5" id="c21" placeholder="Enter no. of nodes" aria-describedby="basic-addon1">
           </div>
 
           <div class="input-group mb-3">
-            <span class="input-group-text fs-5" id="basic-addon1">No. of Edges (E)</span>
-            <input type="number" class="form-control" id="c22" aria-describedby="basic-addon1">
+            <span class="input-group-text fs-5 mySpanClass" id="basic-addon1">No. of Edges (E)</span>
+            <input type="number" class="form-control fs-5" id="c22" placeholder="Enter no. of edges" aria-describedby="basic-addon1">
           </div>
 
           <div class="input-group mb-3">
-            <span class="input-group-text fs-5" id="basic-addon1">Cyclomatic Complexity V(G)</span>
-            <input type="number" class="form-control" id="c23" placeholder="E - N + 2" aria-describedby="basic-addon1">
+            <span class="input-group-text fs-5 mySpanClass" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+            <input type="number" class="form-control fs-5" id="c23" placeholder="E - N + 2" aria-describedby="basic-addon1">
           </div>
-          <button id="calbtn2" class="btn btn-success border-dark" type="button" onclick="calex2()" disabled>
-            Submit</button>
+          <button id="calbtn2" class="btn btn-success border border-1 border-dark" type="button" onclick="calex2()" disabled>
+            Check</button>
         </div>
       </div>
       <div id="linearpath2" class="card " style="display:none;">
@@ -464,43 +467,43 @@ main (int argc, char * * argv)
           <label for="table5" class="form-label fs-6" style=" font-weight: bold;">The linearly independent paths for the
             above CFG are:</label>
             <div class="input-group mb-3 ">
-              <span class="input-group-text  fs-5" id="basic-addon1">Path 1</span>
-              <input type="number" class="form-control" id="p1" aria-describedby="basic-addon1">
+              <span class="input-group-text fs-5 mySpanClass1 " id="basic-addon1">Path 1</span>
+              <input type="number" class="form-control fs-5" id="p1" aria-describedby="basic-addon1">
               <span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2" aria-describedby="basic-addon1">
+              <input type="number" class="form-control fs-5" id="p2" aria-describedby="basic-addon1">
               <span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3" aria-describedby="basic-addon1">
+              <input type="number" class="form-control fs-5" id="p3" aria-describedby="basic-addon1">
               <span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p4" aria-describedby="basic-addon1">
+              <input type="number" class="form-control fs-5" id="p4" aria-describedby="basic-addon1">
               <button id="chkbtn1" class="btn btn-success border-dark" type="button" onclick="chkex21()" disabled>
                 Check</button>
             </div>
 
             <div class="input-group mb-3 ">
-              <span class="input-group-text fs-5" id="basic-addon1">Path 2</span>
-              <input type="number" class="form-control" id="p2a" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2b" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2c" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2d" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2e" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2f" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2g" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p2h" aria-describedby="basic-addon1">
+              <span class="input-group-text fs-5 mySpanClass1" id="basic-addon1">Path 2</span>
+              <input type="number" class="form-control fs-5" id="p2a" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p2b" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p2c" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p2d" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p2e" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p2f" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p2g" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p2h" aria-describedby="basic-addon1">
               <button id="chkbtn2" class="btn btn-success border-dark" type="button" onclick="chkex22()" disabled>
                 Check</button>
             </div>
             <div class="input-group mb-3 ">
-              <span class="input-group-text fs-5" id="basic-addon1">Path 3</span>
-              <input type="number" class="form-control" id="p3a" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3b" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3c" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3d" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3e" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3f" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3g" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3h" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3i" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
-              <input type="number" class="form-control" id="p3j" aria-describedby="basic-addon1">
+              <span class="input-group-text fs-5 mySpanClass1" id="basic-addon1">Path 3</span>
+              <input type="number" class="form-control fs-5" id="p3a" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3b" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3c" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3d" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3e" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3f" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3g" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3h" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3i" aria-describedby="basic-addon1"><span class="input-group-text" id="basic-addon1">-</span>
+              <input type="number" class="form-control fs-5" id="p3j" aria-describedby="basic-addon1">
               <button id="chkbtn3" class="btn btn-success border-dark" type="button" onclick="chkex23()" disabled>
                 Check</button>
             </div>
@@ -575,8 +578,12 @@ main (int argc, char * * argv)
             }
 
           </p>
-          <p class="fs-6 ">Determine the cyclomatic complexity of this program.
-            How would you classify this program in terms of its complexity (simple, complex, unstable)?</p>
+          <p class="fs-6 fw-bold">Learning Objectives:</p>
+          <ul>
+            <li class="fs-6 ">Determine the cyclomatic complexity of this program (McCabe's Cyclomatic complexity can be obtained by: E - N + 2).</li>
+          <li class="fs-6 ">How would you classify this program in terms of its complexity (simple, complex, unstable)?</li>
+          </ul>
+        
 
           <p class="fs-6 " style="text-align: justify;"><b>Limitations:</b> The current workspace can generate CFGs only
             for
@@ -743,7 +750,7 @@ main (int argc, char * * argv)
 
 
               <br>
-              <button id="drawbtn3" class="btn btn-primary" type="button" onclick="drawbtex3()" disabled> Show Control Flow Graph</button>
+              <button id="drawbtn3" class="btn btn-primary border border-1 border-dark" type="button" onclick="drawbtex3()" disabled> Show Control Flow Graph</button>
 
             </div> <!-- column ended for exercise 3-->
           </div> <!--row ended for exrcise 3-->
@@ -757,7 +764,7 @@ main (int argc, char * * argv)
           <label for="table34" class="form-label fs-6" style=" font-weight: bold;">Control Flow Graph of the program
           </label>
           <div id="cfg_diag_ex3">
-            <img src="./images/cfg3.png" alt="cfg3">
+            <img src="./images/cfg3.png" class="img-fluid" alt="cfg3">
           </div>
         </div>
       </div>
@@ -769,20 +776,30 @@ main (int argc, char * * argv)
             complexity
           </label>
           <div class="input-group mb-3 ">
-            <span class="input-group-text" id="basic-addon1">No. of Nodes (N)</span>
-            <input type="number" class="form-control" id="c31" aria-describedby="basic-addon1">
+            <span class="input-group-text mySpanClass fs-5" id="basic-addon1">No. of Nodes (N)</span>
+            <input type="number" class="form-control fs-5" id="c31" placeholder="Enter no. of nodes" aria-describedby="basic-addon1">
           </div>
 
           <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">No. of Edges (E)</span>
-            <input type="number" class="form-control" id="c32" aria-describedby="basic-addon1">
+            <span class="input-group-text mySpanClass fs-5" id="basic-addon1">No. of Edges (E)</span>
+            <input type="number" class="form-control fs-5" id="c32" placeholder="Enter no. of edges" aria-describedby="basic-addon1">
           </div>
 
           <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Cyclomatic Complexity V(G)</span>
-            <input type="number" class="form-control" id="c33" placeholder="E - N + 2" aria-describedby="basic-addon1">
+            <span class="input-group-text mySpanClass fs-5" id="basic-addon1">Cyclomatic Complexity V(G)</span>
+            <input type="number" class="form-control fs-5" id="c33" placeholder="E - N + 2" aria-describedby="basic-addon1">
           </div>
-          <button id="calbtn3 " class="btn btn-success " type="button" onclick="calex3()"  disabled> Submit</button>
+          <div class="input-group mb-3">
+            <span class="input-group-text mySpanClass fs-5" id="basic-addon1">Module Category</span>
+            <select class="form-select fs-5" id="selcatvg" aria-label="Example select with button addon">
+              <option value ="0" selected>Choose...</option>
+              <option value="1">Simple</option>
+              <option value="2">Complex</option>
+              <option value="3">More complex</option>
+              <option value="4">Unstable</option>
+            </select>
+          </div>
+          <button id="calbtn3" class="btn btn-success border border-1 border-dark " type="button" onclick="calex3()"  disabled> Check</button>
         </div>
       </div>
       
