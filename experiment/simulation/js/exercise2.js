@@ -40,7 +40,7 @@ else if ((inpt21 == 10) && (inpt22 == 11) && (inpt23 == 3)) {
   }
 
   else if ((inpt21 != 10)) {
-    alert("Incorrect. Check no of nodes");
+    alert("Incorrect. No of nodes should be including the ENTRY and EXIT node");
     document.getElementById("c21").style.backgroundColor="#FFAB99 ";
   }
 
@@ -131,6 +131,7 @@ function drawbtex2() {
   document.getElementById("chkbtn1").disabled = false;
   document.getElementById("chkbtn2").disabled = false;
   document.getElementById("chkbtn3").disabled = false;
+  window.scrollBy(0, 400);
 
 
 }

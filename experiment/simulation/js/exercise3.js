@@ -44,7 +44,7 @@ function addbtnt31(){
     }
 
     else if((inpt31 != 15)){
-       alert("Incorrect. Check no of nodes");
+       alert("Incorrect. No of nodes should be including the ENTRY and EXIT node");
        document.getElementById("c31").style.backgroundColor="#FFAB99 ";
     }
 
@@ -74,5 +74,5 @@ function drawbtex3(){
 
     document.getElementById("dispuml3").style.display="block";
     document.getElementById("calbtn3").disabled=false;
-   
+    window.scrollBy(0, 400);
 }  
