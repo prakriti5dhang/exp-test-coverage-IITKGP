@@ -243,19 +243,24 @@ div.divscroll {
 }
 .dgreyc{
   color: #4d4343;
+  font-weight: bold;
 }
 .greyc{
   color: #797979;
+  font-weight: bold;
   }
   .pinkc{
-  color:rgb(252, 4, 190)
+  color:rgb(252, 4, 190);
+  font-weight: bold;
   }
   .bluec{
   color: blue;
+  font-weight: bold;
   }
   
   .greenc{
   color: rgb(18, 107, 0);
+  font-weight: bold;
   }
 
 /*footer {
